@@ -5,17 +5,9 @@ class Main extends CI_Controller {
 
  function index(){
 
-   $hak_akses ="Rw";
+   $hak_akses ="Warga";
 
-   // if($hak_akses == 'warga'){
-   //
-   // } elseif($hak_akses == 'rt'){
-   //
-   // } elseif($hak_akses == 'rw'){
-   //
-   // } else{
-   //
-   // }
+
    switch ($hak_akses) {
       case 'Warga':
         $this->load->view('warga/main');

@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Dashboard | SIAR</title>
+    <title>Rukun Tetangga | SIAR</title>
   </head>
   <body>
-    <h1>Punyee RT bree</h1>
+    <h1>Rukun Tetangga</h1>
     <ul>
       <li>
         <a href="#/dashboard">Dashboard</a>
@@ -31,27 +31,30 @@
 
         var href;
 
-        function load_content(link){
-          // $.get(url,function);
+        function load_content(link)
+          {
+          // Struktur => $.get(url,function);
           $.get(`<?= base_url().'rt/' ?>${link}`,function(content){
             $('#content').html(content);
           });
         }
 
-        // Navigasi
-        $(window).on('hashchange',function(){
+        // load halaman with URL
+        if (location.hash)
+        {
+          href = location.hash.substr(2);
+          load_content(href);
+        }else
+        {
+          location.hash ='#/dashboard';
+        }
+
+        // load halaman with Navigasi
+        $(window).on('hashchange',function()
+        {
           href = location.hash.substr(2);
           load_content(href);
         });
-
-        //URL
-        if (location.hash) {
-          href = location.hash.substr(2);
-          load_content(href);
-
-        }else{
-          location.hash ='#/dashboard';
-        }
       });
     </script>
   </body>
