@@ -5,7 +5,7 @@ class Main extends CI_Controller {
 
  function index(){
 
-   $hak_akses ="Warga";
+   $hak_akses ="Rt";
 
 
    switch ($hak_akses) {
