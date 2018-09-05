@@ -3,16 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Login | SIAR</title>
-    <link rel="stylesheet" href="<?= base_url().'assets/style.css' ?>">
+    <!-- Bootstrap -->
+    <link href="<?= base_url().'assets/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css' ?>" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="<?= base_url().'assets/gentelella/vendors/font-awesome/css/font-awesome.min.css' ?>" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="<?= base_url().'assets/gentelella/vendors/nprogress/nprogress.css'?>" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="<?= base_url().'assets/gentelella/vendors/iCheck/skins/flat/green.css' ?>" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="<?= base_url().'assets/gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' ?>" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="<?= base_url().'assets/gentelella/vendors/jqvmap/dist/jqvmap.min.css' ?>" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="<?= base_url().'assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css' ?>" rel="stylesheet">
+    <!-- jQuery custom content scroller -->
+    <link href="<?= base_url().'assets/gentelella/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css' ?>" rel="stylesheet"/>
+    <!-- Custom Theme Style -->
+    <link href="<?= base_url().'assets/gentelella/build/css/custom.min.css' ?>" rel="stylesheet">
   </head>
-  <body>
-    <h1>Login</h1>
-    <form action="index.html" method="post" id="form-login">
-      <label for="">Email</label>
-      <input type="email" name="" value="" id="email">
-      <label for="">Password</label>
-      <input type="password" name="" value="" id="password">
-      <button type="submit" name="button" id=btn-login >Login</button>
-    </form>
-  </body>
+  <body class="login">
+      <div>
+        <a class="hiddenanchor" id="signup"></a>
+        <a class="hiddenanchor" id="signin"></a>
+
+        <div class="login_wrapper">
+          <div class="animate form login_form">
+            <section class="login_content">
+              <form>
+                <h1>Login SIAR</h1>
+                <div>
+                  <input type="number" class="form-control" placeholder="No Kartu keluarga" required="" />
+                </div><br>
+                <div>
+                  <input type="password" class="form-control" placeholder="Password" required="" />
+                </div>
+                <div>
+                   <button type="submit" class="btn btn-info btn-lg">Login</button>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="separator">
+                  <div class="clearfix"></div><div>
+                    <h1>Sistem Informasi Administrasi RW</h1>
+                    <p>©2018 All Rights Reserved</p>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </body>
 </html>

@@ -22,28 +22,7 @@
   <link href="<?= base_url().'assets/gentelella/build/css/custom.min.css' ?>" rel="stylesheet">
 </head>
   <body class="nav-md">
-    <!-- top navigation -->
-      <div class="top_nav">
-        <div class="nav_menu">
-          <nav>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="">
-                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <span>Yugi Setiawan</span>
-                  <span class=" fa fa-angle-down"></span>
-                </a>
-                <ul class="dropdown-menu dropdown-usermenu pull-right">
-                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                </ul>
-              </li>
-              <li> <a href="#/halaman2"> Halaman 2 </a></li>
-              <li> <a href="#/halaman1"> Halaman 1 </a></li>
-              <li> <a href="#/dashboard"> Dashboard </a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    <!-- /top navigation -->
+    
 
     <div id="content">
 
