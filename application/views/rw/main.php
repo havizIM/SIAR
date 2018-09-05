@@ -19,6 +19,12 @@
   <link href="<?= base_url().'assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css' ?>" rel="stylesheet">
   <!-- jQuery custom content scroller -->
   <link href="<?= base_url().'assets/gentelella/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css' ?>" rel="stylesheet"/>
+  <!-- Data Tables -->
+  <link href="<?= base_url().'assets/gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css' ?>" rel="stylesheet">
+  <link href="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css' ?>" rel="stylesheet">
+  <link href="<?= base_url().'assets/gentelella/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css' ?>" rel="stylesheet">
+  <link href="<?= base_url().'assets/gentelella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css' ?>" rel="stylesheet">
+  <link href="<?= base_url().'assets/gentelella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css' ?>" rel="stylesheet">
   <!-- Custom Theme Style -->
   <link href="<?= base_url().'assets/gentelella/build/css/custom.min.css' ?>" rel="stylesheet">
 </head>
@@ -73,7 +79,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-user fa-4"></i>ADMIN
+                    <i class="fa fa-user"></i>ADMIN
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -91,11 +97,12 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <div id="content">
 
-                </div>
               </div>
             </div>
+          </div>
+          <div id="content">
+
           </div>
         </div>
         <!-- /page content -->
@@ -157,6 +164,22 @@
           <script src="<?= base_url().'assets/gentelella/build/js/custom.min.js' ?>"></script>
       <!-- JQuery custom scroller -->
           <script src="<?= base_url().'assets/gentelella/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js' ?>"></script>
+      <!-- Data Tables -->
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net/js/jquery.dataTables.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/buttons.flash.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/buttons.html5.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/buttons.print.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/jszip/dist/jszip.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/pdfmake/build/pdfmake.min.js' ?>" type="text/javascript"></script>
+      <script src="<?= base_url().'assets/gentelella/vendors/pdfmake/build/vfs_fonts.js' ?>" type="text/javascript"></script>
     </div>
     <!-- Function load -->
     <script type="text/javascript">
