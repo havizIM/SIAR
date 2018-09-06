@@ -29,7 +29,7 @@
   <link href="<?= base_url().'assets/gentelella/build/css/custom.min.css' ?>" rel="stylesheet">
 </head>
 <body class="nav-md">
-<div class="container body">
+    <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
@@ -42,7 +42,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="image/yugi.jpg" alt="..." class="img-circle profile_img">
+                <img src="<?= base_url().'image/yugi.jpg' ?>" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -56,11 +56,11 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3>MenuBar</h3>
+                <h3>Menu</h3>
                 <ul class="nav side-menu">
-                  <li><a href="#/dashboard"><i class="fa fa-home"></i> Dashboard </a></li>
-                  <li><a href="#/halaman1"><i class="fa fa-edit"></i> Halaman 1 </a></li>
-                  <li><a href="#/halaman2"><i class="fa fa-desktop"></i> Halaman 2 </a></li>
+                  <li><a href="#/dashboard"><i class="fa fa-home"></i> Dashboard</a></li>
+                  <li><a href="#/halaman1"><i class="fa fa-book"></i>Halaman 1</a></li>
+                  <li> <a href="#/halaman2"><i class="fa fa-book"></i>Halaman2</a></li>
                 </ul>
               </div>
             </div>
@@ -79,10 +79,18 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-user"></i>ADMIN
+                    <span>Admin</span>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li>
                     <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
@@ -93,26 +101,13 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="page-title">
-                <div class="title_left">
-                  <div id="content">
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
+        <div id="content"></div>
         <!-- /page content -->
 
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Universitas Bung Karno
+            <span>Sistem Informasi Administrasi RW</span>
           </div>
           <div class="clearfix"></div>
         </footer>
@@ -120,11 +115,6 @@
       </div>
     </div>
 
-
-
-
-  <!-- Footer Ground -->
-    <div>
       <!-- jQuery -->
           <script src="<?= base_url().'assets/gentelella/vendors/jquery/dist/jquery.min.js' ?>"></script>
       <!-- Bootstrap -->
@@ -167,21 +157,21 @@
       <!-- JQuery custom scroller -->
           <script src="<?= base_url().'assets/gentelella/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js' ?>"></script>
       <!-- Data Tables -->
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net/js/jquery.dataTables.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/buttons.flash.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/buttons.html5.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/buttons.print.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/jszip/dist/jszip.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/pdfmake/build/pdfmake.min.js' ?>" type="text/javascript"></script>
-      <script src="<?= base_url().'assets/gentelella/vendors/pdfmake/build/vfs_fonts.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net/js/jquery.dataTables.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/buttons.flash.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/buttons.html5.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-buttons/js/buttons.print.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/jszip/dist/jszip.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/pdfmake/build/pdfmake.min.js' ?>" type="text/javascript"></script>
+          <script src="<?= base_url().'assets/gentelella/vendors/pdfmake/build/vfs_fonts.js' ?>" type="text/javascript"></script>
     </div>
     <!-- Function load -->
     <script type="text/javascript">
@@ -217,11 +207,6 @@
 
 
             });
-
-
-
           </script>
-
-
   </body>
 </html>

@@ -22,20 +22,81 @@
     <link href="<?= base_url().'assets/gentelella/build/css/custom.min.css' ?>" rel="stylesheet">
   </head>
   <body class="nav-md">
+    <!-- top navigation -->
+            <div class="top_nav">
+              <div class="nav_menu">
+                <nav>
+                  <ul class="nav navbar-nav navbar-left" style="margin-top:10px; padding-left:20px;">
+                    <h2>Sistem Informasi Administrasi RW</h2>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                      <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="images/img.jpg" alt="">John Doe
+                        <span class=" fa fa-angle-down"></span>
+                      </a>
+                      <ul class="dropdown-menu dropdown-usermenu pull-right">
+                        <li><a href="javascript:;"> Profile</a></li>
+                        <li>
+                          <a href="javascript:;">
+                            <span class="badge bg-red pull-right">50%</span>
+                            <span>Settings</span>
+                          </a>
+                        </li>
+                        <li><a href="javascript:;">Help</a></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- /top navigation -->
 
-  <ul>
-    <li> <a href="#/halaman2"> Halaman 2 </a></li>
-    <li> <a href="#/halaman1"> Halaman 1 </a></li>
-    <li> <a href="#/dashboard"> Dashboard </a></li>
-  </ul>
+            <div class="right_col" role="main">
+                <div class="">
+                    <div class="page-title">
+                    </div>
 
+                    <div class="clearfix"></div>
 
-    <div id="content">
+                    <div class="">
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <h1>Mading Informasi</h1>
 
-    </div>
+                            <div class="clearfix"></div>
+                          </div>
+                          <div class="x_content">
+                            <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                              <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                                <li role="presentation" class=""><a href="#/dashboard" aria-expanded="true">Dashboard</a>
+                                </li>
+                                <li role="presentation" class=""><a href="#/halaman1"  aria-expanded="false">Halaman 1</a>
+                                </li>
+                                <li role="presentation" class=""><a href="#/halaman2" aria-expanded="false">Halaman 2</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div id="content">
 
-    <!-- Footer Ground -->
-    <h3>Footer</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <!-- footer content -->
+       <footer>
+         <div class="pull-right">
+           Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+         </div>
+         <div class="clearfix"></div>
+       </footer>
+       <!-- /footer content -->
+                      </div>
+                      </div>
+
 
     <!-- jQuery -->
         <script src="<?= base_url().'assets/gentelella/vendors/jquery/dist/jquery.min.js' ?>"></script>
@@ -75,7 +136,7 @@
         <script src="<?= base_url().'assets/gentelella/vendors/moment/min/moment.min.js' ?>"></script>
         <script src="<?= base_url().'assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js' ?>"></script>
     <!--  Custom Theme Script -->
-        <script src="<?= base_url().'assets/gentelella/build/js/custom.min.js' ?>"></script>    
+        <script src="<?= base_url().'assets/gentelella/build/js/custom.min.js' ?>"></script>
 
 
     <!-- Function load -->

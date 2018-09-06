@@ -33,7 +33,7 @@
               <form>
                 <h1>Login Administrator</h1>
                 <div>
-                  <input type="number" class="form-control" placeholder="No Kartu keluarga" required="" />
+                  <input type="text" class="form-control" placeholder="Username" required="" />
                 </div><br>
                 <div>
                   <input type="password" class="form-control" placeholder="Password" required="" />
