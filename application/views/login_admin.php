@@ -31,7 +31,7 @@
           <div class="animate form login_form">
             <section class="login_content">
               <form>
-                <h1>Login SIAR</h1>
+                <h1>Login Administrator</h1>
                 <div>
                   <input type="number" class="form-control" placeholder="No Kartu keluarga" required="" />
                 </div><br>

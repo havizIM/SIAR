@@ -36,41 +36,6 @@
 
     <!-- Footer Ground -->
     <h3>Footer</h3>
-    <!-- Function load -->
-    <script type="text/javascript">
-
-      $(document).ready(function()
-      {
-        var href;
-
-        function load_content(link)
-        {
-          $.get(`<?= base_url().'warga/' ?>${link}`,function(content)
-          {
-            $('#content').html(content);
-          });
-        }
-
-        //Load halaman with URL
-        if(location.hash)
-        {
-          href = location.hash.substr(2);
-          load_content(href);
-        }else
-        {
-          location.hash ='#/dashboard';
-          load_content(href);
-        }
-
-        // load halaman with Navigasi
-        $(window).on('hashchange',function(){
-          href = location.hash.substr(2);
-          load_content(href);
-        });
-
-      });
-
-    </script>
 
     <!-- jQuery -->
         <script src="<?= base_url().'assets/gentelella/vendors/jquery/dist/jquery.min.js' ?>"></script>
@@ -110,8 +75,44 @@
         <script src="<?= base_url().'assets/gentelella/vendors/moment/min/moment.min.js' ?>"></script>
         <script src="<?= base_url().'assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js' ?>"></script>
     <!--  Custom Theme Script -->
-        <script src="<?= base_url().'assets/gentelella/build/js/custom.min.js' ?>"></script>
+        <script src="<?= base_url().'assets/gentelella/build/js/custom.min.js' ?>"></script>    
 
+
+    <!-- Function load -->
+    <script type="text/javascript">
+
+      $(document).ready(function()
+      {
+        var href;
+
+        function load_content(link)
+        {
+          $.get(`<?= base_url().'warga/' ?>${link}`,function(content)
+          {
+            $('#content').html(content);
+          });
+        }
+
+        //Load halaman with URL
+        if(location.hash)
+        {
+          href = location.hash.substr(2);
+          load_content(href);
+        }else
+        {
+          location.hash ='#/dashboard';
+          load_content(href);
+        }
+
+        // load halaman with Navigasi
+        $(window).on('hashchange',function(){
+          href = location.hash.substr(2);
+          load_content(href);
+        });
+
+      });
+
+    </script>
 
   </body>
 </html>

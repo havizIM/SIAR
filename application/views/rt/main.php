@@ -22,45 +22,13 @@
   <link href="<?= base_url().'assets/gentelella/build/css/custom.min.css' ?>" rel="stylesheet">
 </head>
   <body class="nav-md">
-    
+
 
     <div id="content">
 
     </div>
-
+    <!-- Footer Ground -->
     <h3>Footer</h3>
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-
-        var href;
-
-        function load_content(link)
-          {
-          // Struktur => $.get(url,function);
-          $.get(`<?= base_url().'rt/' ?>${link}`,function(content){
-            $('#content').html(content);
-          });
-        }
-
-        // load halaman with URL
-        if (location.hash)
-        {
-          href = location.hash.substr(2);
-          load_content(href);
-        }else
-        {
-          location.hash ='#/dashboard';
-        }
-
-        // load halaman with Navigasi
-        $(window).on('hashchange',function()
-        {
-          href = location.hash.substr(2);
-          load_content(href);
-        });
-      });
-    </script>
 
     <!-- jQuery -->
         <script src="<?= base_url().'assets/gentelella/vendors/jquery/dist/jquery.min.js' ?>"></script>
@@ -102,6 +70,37 @@
     <!--  Custom Theme Script -->
         <script src="<?= base_url().'assets/gentelella/build/js/custom.min.js' ?>"></script>
 
+    <!-- Function Load-->
+    <script type="text/javascript">
+      $(document).ready(function(){
 
+        var href;
+
+        function load_content(link)
+          {
+          // Struktur => $.get(url,function);
+          $.get(`<?= base_url().'rt/' ?>${link}`,function(content){
+            $('#content').html(content);
+          });
+        }
+
+        // load halaman with URL
+        if (location.hash)
+        {
+          href = location.hash.substr(2);
+          load_content(href);
+        }else
+        {
+          location.hash ='#/dashboard';
+        }
+
+        // load halaman with Navigasi
+        $(window).on('hashchange',function()
+        {
+          href = location.hash.substr(2);
+          load_content(href);
+        });
+      });
+    </script>
   </body>
 </html>

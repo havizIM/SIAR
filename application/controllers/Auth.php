@@ -7,5 +7,10 @@ class Auth extends CI_Controller {
 	{
 		$this->load->view('login');
 	}
+
+  function admin()
+  {
+    $this->load->view('login_admin');
+  }
 }
 ?>

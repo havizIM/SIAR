@@ -94,14 +94,16 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="page-title">
+                <div class="title_left">
+                  <div id="content">
 
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div id="content">
 
           </div>
         </div>
