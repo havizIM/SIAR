@@ -27,24 +27,18 @@
               <div class="nav_menu">
                 <nav>
                   <ul class="nav navbar-nav navbar-left" style="margin-top:10px; padding-left:20px;">
-                    <h2>Sistem Informasi Administrasi RW</h2>
+                    <h2>Selamat Datang,</h2>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li class="">
                       <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <img src="images/img.jpg" alt="">John Doe
+                        <img src="image/yugi.jpg" alt="">Yugi Setiawan
                         <span class=" fa fa-angle-down"></span>
                       </a>
                       <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="javascript:;"> Profile</a></li>
-                        <li>
-                          <a href="javascript:;">
-                            <span class="badge bg-red pull-right">50%</span>
-                            <span>Settings</span>
-                          </a>
-                        </li>
-                        <li><a href="javascript:;">Help</a></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                        <li><a href="javascript:;"> <i class="fa fa-pencil-square-o pull-right"></i>Change Password</a></li>
+
+                        <li><a href="<?= base_url().'/auth' ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -53,7 +47,7 @@
             </div>
             <!-- /top navigation -->
 
-            <div class="right_col" role="main">
+            <div class="left-col" role="main">
                 <div class="">
                     <div class="page-title">
                     </div>
@@ -64,20 +58,16 @@
                       <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                           <div class="x_title">
-                            <h1>Mading Informasi</h1>
+                            <h1 class="text-center">Mading Informasi</h1>
 
                             <div class="clearfix"></div>
                           </div>
                           <div class="x_content">
                             <div class="" role="tabpanel" data-example-id="togglable-tabs">
                               <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                                <li role="presentation" class=""><a href="#/dashboard" aria-expanded="true">Dashboard</a>
-                                </li>
-                                <li role="presentation" class=""><a href="#/halaman1"  aria-expanded="false">Halaman 1</a>
-                                </li>
-                                <li role="presentation" class=""><a href="#/halaman2" aria-expanded="false">Halaman 2</a>
-                                </li>
-                              </ul>
+                                <li role="presentation" class=""><a href="#/dashboard" aria-expanded="true">Dashboard</a></li>
+                                <li role="presentation" class=""><a href="#/halaman1"  aria-expanded="false">Form Pengajuan</a>
+                                </li></ul>
                             </div>
                             <div id="content">
 
@@ -85,17 +75,17 @@
                           </div>
                         </div>
                       </div>
-                      </div>
+                    </div>
                       <!-- footer content -->
-       <footer>
-         <div class="pull-right">
-           Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-         </div>
-         <div class="clearfix"></div>
-       </footer>
-       <!-- /footer content -->
-                      </div>
-                      </div>
+                      <footer>
+                        <div class="pull-right">
+                          <span>Sistem Informasi Administrasi RW</span>
+                        </div>
+                        <div class="clearfix"></div>
+                      </footer>
+                      <!-- /footer content -->
+                    </div>
+                  </div>
 
 
     <!-- jQuery -->
