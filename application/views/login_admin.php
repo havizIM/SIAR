@@ -1,59 +1,126 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Login | SIAR</title>
-    <!-- Bootstrap -->
-    <link href="<?= base_url().'assets/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css' ?>" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="<?= base_url().'assets/gentelella/vendors/font-awesome/css/font-awesome.min.css' ?>" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="<?= base_url().'assets/gentelella/vendors/nprogress/nprogress.css'?>" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="<?= base_url().'assets/gentelella/vendors/iCheck/skins/flat/green.css' ?>" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="<?= base_url().'assets/gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' ?>" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="<?= base_url().'assets/gentelella/vendors/jqvmap/dist/jqvmap.min.css' ?>" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
-    <link href="<?= base_url().'assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css' ?>" rel="stylesheet">
-    <!-- jQuery custom content scroller -->
-    <link href="<?= base_url().'assets/gentelella/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css' ?>" rel="stylesheet"/>
-    <!-- Custom Theme Style -->
-    <link href="<?= base_url().'assets/gentelella/build/css/custom.min.css' ?>" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <title>Login Admin | SIAR</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <link href="<?= base_url().'assets/css/dashboard.css' ?>" rel="stylesheet" />
+    <link href="<?= base_url().'assets/plugins/charts-c3/plugin.css' ?>" rel="stylesheet" />
+    <link href="<?= base_url().'assets/plugins/maps-google/plugin.css' ?>" rel="stylesheet" />
+    <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
+
+    <script src="<?= base_url().'assets/js/vendors/jquery-3.2.1.min.js' ?>"></script>
+    <script src="<?= base_url().'assets/plugins/toastr/toastr.min.js' ?>"></script>
+
+<style media="screen">
+  body{
+    background: url('<?= base_url().'image/background_login.jpg' ?>');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .card{
+    border-radius: 15px;
+    background-color: #c98a5d80;
+  }
+  .card img{
+    width: 100px;
+    height: 100px;
+  }
+</style>
+
   </head>
-  <body class="login">
-      <div>
-        <a class="hiddenanchor" id="signup"></a>
-        <a class="hiddenanchor" id="signin"></a>
-
-        <div class="login_wrapper">
-          <div class="animate form login_form">
-            <section class="login_content">
-              <form>
-                <h1>Login Administrator</h1>
-                <div>
-                  <input type="text" class="form-control" placeholder="Username" required="" />
-                </div><br>
-                <div>
-                  <input type="password" class="form-control" placeholder="Password" required="" />
-                </div>
-                <div>
-                   <button type="submit" class="btn btn-info btn-lg" id="login">Login</button>
-                </div>
-
-                <div class="clearfix"></div>
-
-                <div class="separator">
-                  <div class="clearfix"></div><div>
-                    <h4>Sistem Informasi Administrasi RW</h4>
-                    <p>©2018 All Rights Reserved</p>
+  <body>
+    <div class="page">
+      <div class="page-single">
+        <div class="container">
+          <div class="row">
+            <div class="col col-login mx-auto">
+              <form class="card" id="form-login">
+                <div class="card-body p-6">
+                  <div class="card-title text-center"> <img src="<?= base_url().'image/logo.png' ?>" alt=""> </div>
+                  <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">
+                      <span>Password</span>
+                    </label>
+                    <input type="password" class="form-control" id="password" name="password">
+                  </div>
+                  <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" />
+                      <span class="custom-control-label">Show password</span>
+                    </label>
+                  </div>
+                  <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
                   </div>
                 </div>
               </form>
-            </section>
+            </div>
           </div>
         </div>
       </div>
-    </body>
+    </div>
+
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+      $('#form-login').on('submit',function(e){
+        e.preventDefault(); //function mematikan loading
+
+        var submit = true;
+
+        $(this).find('#username, #password').each(function(){
+          if ($(this).val() == '' ) {
+            submit = false;
+          }else {
+            submit = true;
+          }
+        }); //function menci data sudah terisi / belum
+
+        if (submit == true ) {
+          toastr.success('Berhasil nih yeee');
+        }else{
+          toastr.error('Gagal Shobb');
+        }
+      });
+      toastr.options = {
+      "closeButton": false,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": false,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": true,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+}
+    });
+
+
+    </script>
+  </body>
 </html>

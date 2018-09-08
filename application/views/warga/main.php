@@ -1,130 +1,104 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
     <title>Warga | SIAR</title>
-    <!-- Bootstrap -->
-    <link href="<?= base_url().'assets/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css' ?>" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="<?= base_url().'assets/gentelella/vendors/font-awesome/css/font-awesome.min.css' ?>" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="<?= base_url().'assets/gentelella/vendors/nprogress/nprogress.css'?>" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="<?= base_url().'assets/gentelella/vendors/iCheck/skins/flat/green.css' ?>" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="<?= base_url().'assets/gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' ?>" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="<?= base_url().'assets/gentelella/vendors/jqvmap/dist/jqvmap.min.css' ?>" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
-    <link href="<?= base_url().'assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css' ?>" rel="stylesheet">
 
-    <!-- Custom Theme Style -->
-    <link href="<?= base_url().'assets/gentelella/build/css/custom.min.css' ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url().'assets/fonts/fontawesome/css/fontawesome.min.css' ?>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+
+
+
   </head>
-  <body class="nav-md">
-    <!-- top navigation -->
-            <div class="top_nav">
-              <div class="nav_menu">
-                <nav>
-                  <ul class="nav navbar-nav navbar-left" style="margin-top:10px; padding-left:20px;">
-                    <h2>Selamat Datang,</h2>
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right">
-                    <li class="">
-                      <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <img src="image/yugi.jpg" alt="">Yugi Setiawan
-                        <span class=" fa fa-angle-down"></span>
-                      </a>
-                      <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="javascript:;"> <i class="fa fa-pencil-square-o pull-right"></i>Change Password</a></li>
-
-                        <li><a href="<?= base_url().'/auth' ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </nav>
+  <body>
+    <div class="page">
+      <div class="page-main">
+        <div class="header py-4">
+          <div class="container">
+            <div class="d-flex">
+              <!-- Taruh logo disini -->Logo Perusahaan
+              <div class="d-flex order-lg-2 ml-auto">
+                <div class="nav-item d-none d-md-flex">
+                  <span class="btn btn-sm btn-outline-primary" target="_blank"><i class="fe fe-lock"></i> Change Password</span>
+                </div>
+                <div class="nav-item d-none d-md-flex">
+                  <span class="btn btn-sm btn-outline-danger" target="_blank"><i class="fe fe-power"></i>  Logout</span>
+                </div>
+                <!-- <div class="dropdown">
+                  <a class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                    <span class="avatar" style="background-image: url("<?= base_url().'images/yugi.jpg' ?>")"></span>
+                    <span class="ml-2 d-none d-lg-block">
+                      <span class="text-default">Selamat Datang,</span>
+                      <small class="text-muted d-block mt-1">Yugi Setiawan</small>
+                    </span>
+                  </a>
+                </div> -->
+              </div>
+              <a class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                <span class="header-toggler-icon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg order-lg-first">
+                <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                  <li class="nav-item">
+                    <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i>Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i>Pengajuan</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i>Profile Keluarga</a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <!-- /top navigation -->
+          </div>
+        </div>
+        <div class="my-3 my-md-5">
+        </div>
+      </div>
+      <div id="content">
 
-            <div class="left-col" role="main">
-              <div class="page-title">
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row align-items-center flex-row-reverse">
+            <div class="col-auto ml-lg-auto">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <ul class="list-inline list-inline-dots mb-0">
+                    <li class="list-inline-item"><a href="./docs/index.html">Documentation</a></li>
+                    <li class="list-inline-item"><a href="./faq.html">FAQ</a></li>
+                  </ul>
                 </div>
-
-                <div class="clearfix"></div>
-
-                  <div class="">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="x_panel">
-                        <div class="x_title">
-                          <h1 class="text-center">Mading Informasi</h1>
-
-                          <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                          <div class="" role="tabpanel" data-example-id="togglable-tabs">
-                            <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                              <li role="presentation" class=""><a href="#/dashboard" aria-expanded="true">Dashboard</a></li>
-                              <li role="presentation" class=""><a href="#/halaman1"  aria-expanded="false">Form Pengajuan</a>
-                              </li></ul>
-                            </div>
-                            <div id="content">
-
-                            </div>
-                          <!-- Footer Content -->
-                            <footer>
-                              <div class="pull-right ">
-                                <span>Sistem Informasi Administrasi RW</span>
-                              </div>
-                              <div class="clearfix"></div>
-                            </footer>
-                          <!-- Footer -->
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div> <!-- Left Col content-->
-
-
-    <!-- jQuery -->
-        <script src="<?= base_url().'assets/gentelella/vendors/jquery/dist/jquery.min.js' ?>"></script>
-    <!-- Bootstrap -->
-        <script src="<?= base_url().'assets/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js' ?>"></script>
-    <!-- FastClick -->
-        <script src="<?= base_url().'assets/gentelella/vendors/fastclick/lib/fastclick.js' ?>"></script>
-    <!-- NProgress -->
-        <script src="<?= base_url().'assets/gentelella/vendors/nprogress/nprogress.js' ?>"></script>
-    <!-- Chart.js -->
-        <script src="<?= base_url().'assets/gentelella/vendors/Chart.js/dist/Chart.min.js' ?>"></script>
-    <!-- gauge.js -->
-        <script src="<?= base_url().'assets/gentelella/vendors/gauge.js/dist/gauge.min.js' ?>"></script>
-    <!-- bootstrap-progressbar -->
-        <script src="<?= base_url().'assets/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js' ?>"></script>
-    <!-- iCheck -->
-        <script src="<?= base_url().'assets/gentelella/vendors/iCheck/icheck.min.js' ?>"></script>
-    <!-- skycons -->
-        <script src="<?= base_url().'assets/gentelella/vendors/skycons/skycons.js' ?>"></script>
-    <!-- Flot -->
-        <script src="<?= base_url().'assets/gentelella/vendors/Flot/jquery.flot.js' ?>"></script>
-        <script src="<?= base_url().'assets/gentelella/vendors/Flot/jquery.flot.pie.js' ?>"></script>
-        <script src="<?= base_url().'assets/gentelella/vendors/Flot/jquery.flot.time.js' ?>"></script>
-        <script src="<?= base_url().'assets/gentelella/vendors/Flot/jquery.flot.stack.js' ?>"></script>
-        <script src="<?= base_url().'assets/gentelella/vendors/Flot/jquery.flot.resize.js' ?>"></script>
-    <!-- Flot plugins -->
-        <script src="<?= base_url().'assets/gentelella/vendors/flot.orderbars/js/jquery.flot.orderBars.js' ?>"></script>
-        <script src="<?= base_url().'assets/gentelella/vendors/flot-spline/js/jquery.flot.spline.min.js' ?>"></script>
-        <script src="<?= base_url().'assets/gentelella/vendors/flot.curvedlines/curvedLines.js' ?>"></script>
-    <!-- DateJS -->
-        <script src="<?= base_url().'assets/gentelella/vendors/DateJS/build/date.js' ?>"></script>
-    <!-- JQVMap -->
-        <script src="<?= base_url().'assets/gentelella/vendors/jqvmap/dist/jquery.vmap.js' ?>"></script>
-        <script src="<?= base_url().'assets/gentelella/vendors/jqvmap/dist/maps/jquery.vmap.world.js' ?>"></script>
-        <script src="<?= base_url().'assets/gentelella/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' ?>"></script>
-    <!-- bootstrap-daterangepicker -->
-        <script src="<?= base_url().'assets/gentelella/vendors/moment/min/moment.min.js' ?>"></script>
-        <script src="<?= base_url().'assets/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js' ?>"></script>
-    <!--  Custom Theme Script -->
-        <script src="<?= base_url().'assets/gentelella/build/js/custom.min.js' ?>"></script>
+              </div>
+            </div>
+            <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
+              Copyright © 2018 <a href=".">SIAR</a>.All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="<?= base_url().'assets/js/vendors/jquery-3.2.1.min.js' ?>" type="text/javascript"></script>
+    <script src="<?= base_url().'assets/fonts/fontawesome/js/fontawesome.min.js' ?>" type="text/javascript"></script>
 
 
     <!-- Function load -->
@@ -150,7 +124,6 @@
         }else
         {
           location.hash ='#/dashboard';
-          load_content(href);
         }
 
         // load halaman with Navigasi

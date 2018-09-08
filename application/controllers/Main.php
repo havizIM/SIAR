@@ -4,26 +4,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Main extends CI_Controller {
 
  function index(){
+   $login ="user";
+   $hak_akses ="";
 
-   $hak_akses ="Warga";
+   if ($login == 'user') {
+     $this->load->view('warga/main');
+   }else {
+     switch ($hak_akses) {
 
+        case 'Rt':
+          $this->load->view('rt/main');
+        break;
 
-   switch ($hak_akses) {
-      case 'Warga':
-        $this->load->view('warga/main');
-      break;
+        case 'Rw':
+          $this->load->view('rw/main');
+        break;
 
-      case 'Rt':
-        $this->load->view('rt/main');
-      break;
+        default:
 
-      case 'Rw':
-        $this->load->view('rw/main');
-      break;
-
-      default:
-
-      break;
+        break;
+     }
    }
 	}
 }
