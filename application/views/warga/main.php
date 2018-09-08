@@ -48,44 +48,42 @@
             <!-- /top navigation -->
 
             <div class="left-col" role="main">
-                <div class="">
-                    <div class="page-title">
-                    </div>
+              <div class="page-title">
+                </div>
 
-                    <div class="clearfix"></div>
+                <div class="clearfix"></div>
 
-                    <div class="">
-                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="x_panel">
-                          <div class="x_title">
-                            <h1 class="text-center">Mading Informasi</h1>
+                  <div class="">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="x_panel">
+                        <div class="x_title">
+                          <h1 class="text-center">Mading Informasi</h1>
 
-                            <div class="clearfix"></div>
-                          </div>
-                          <div class="x_content">
-                            <div class="" role="tabpanel" data-example-id="togglable-tabs">
-                              <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                                <li role="presentation" class=""><a href="#/dashboard" aria-expanded="true">Dashboard</a></li>
-                                <li role="presentation" class=""><a href="#/halaman1"  aria-expanded="false">Form Pengajuan</a>
-                                </li></ul>
+                          <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                          <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                            <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                              <li role="presentation" class=""><a href="#/dashboard" aria-expanded="true">Dashboard</a></li>
+                              <li role="presentation" class=""><a href="#/halaman1"  aria-expanded="false">Form Pengajuan</a>
+                              </li></ul>
                             </div>
                             <div id="content">
 
                             </div>
+                          <!-- Footer Content -->
+                            <footer>
+                              <div class="pull-right ">
+                                <span>Sistem Informasi Administrasi RW</span>
+                              </div>
+                              <div class="clearfix"></div>
+                            </footer>
+                          <!-- Footer -->
                           </div>
                         </div>
                       </div>
                     </div>
-                      <!-- footer content -->
-                      <footer>
-                        <div class="pull-right">
-                          <span>Sistem Informasi Administrasi RW</span>
-                        </div>
-                        <div class="clearfix"></div>
-                      </footer>
-                      <!-- /footer content -->
-                    </div>
-                  </div>
+                </div> <!-- Left Col content-->
 
 
     <!-- jQuery -->
