@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="<?= base_url().'assets/fonts/fontawesome/css/fontawesome.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
 
+<style media="screen">
+  .page .header{
+        background: #cc3c3c;
+  }
+
+  .container ul li{
+    color: #fff;
+  }
+</style>
   </head>
   <body>
     <div class="page">
@@ -47,6 +56,9 @@
                   </div>
                 </div>
               </div>
+              <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                <span class="header-toggler-icon"></span>
+              </a>
             </div>
           </div>
         </div>
@@ -56,13 +68,13 @@
               <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                   <li class="nav-item">
-                    <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i>Dashboard</a>
+                    <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i>Pengajuan</a>
+                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i> <strong>Pengajuan</strong> </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i>Profile Keluarga</a>
+                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i> <strong>Profile Keluarga</strong> </a>
                   </li>
                 </ul>
               </div>
