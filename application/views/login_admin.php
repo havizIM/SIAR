@@ -52,14 +52,20 @@
                 <div class="card-body p-6">
                   <div class="card-title text-center"> <img src="<?= base_url().'image/logo.png' ?>" alt=""> </div>
                   <div class="form-group">
-                    <label class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+                    <div class="input-icon">
+                      <span class="input-icon-addon">
+                        <i class="fe fe-user"></i>
+                      </span>
+                      <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label class="form-label">
-                      <span>Password</span>
-                    </label>
-                    <input type="password" class="form-control" id="password" name="password">
+                    <div class="input-icon">
+                      <span class="input-icon-addon">
+                        <i class="fe fe-lock"></i>
+                      </span>
+                      <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+                    </div>
                   </div>
                   <div class="form-group">
                     <label class="custom-control custom-checkbox">

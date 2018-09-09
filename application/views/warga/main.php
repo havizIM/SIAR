@@ -15,11 +15,9 @@
 
     <title>Warga | SIAR</title>
 
-    <link rel="stylesheet" href="<?= base_url().'assets/fonts/fontawesome/css/fontawesome.min.css' ?>">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-    <link rel="stylesheet" href="./assets/css/dashboard.css" />
-
-
+    <link rel="stylesheet" href="<?= base_url().'assets/fonts/fontawesome/css/fontawesome.min.css' ?>">
+    <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
 
   </head>
   <body>
@@ -29,14 +27,8 @@
           <div class="container">
             <div class="d-flex">
               <!-- Taruh logo disini -->Logo Perusahaan
-              <div class="d-flex order-lg-2 ml-auto">
-                <div class="nav-item d-none d-md-flex">
-                  <span class="btn btn-sm btn-outline-primary" target="_blank"><i class="fe fe-lock"></i> Change Password</span>
-                </div>
-                <div class="nav-item d-none d-md-flex">
-                  <span class="btn btn-sm btn-outline-danger" target="_blank"><i class="fe fe-power"></i>  Logout</span>
-                </div>
-                <!-- <div class="dropdown">
+              <div class="d-flex order-lg-1 ml-auto">
+                <div class="dropdown">
                   <a class="nav-link pr-0 leading-none" data-toggle="dropdown">
                     <span class="avatar" style="background-image: url("<?= base_url().'images/yugi.jpg' ?>")"></span>
                     <span class="ml-2 d-none d-lg-block">
@@ -44,11 +36,17 @@
                       <small class="text-muted d-block mt-1">Yugi Setiawan</small>
                     </span>
                   </a>
-                </div> -->
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-lock"></i> Change Password
+                    </a>
+
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-log-out"></i> Logout
+                    </a>
+                  </div>
+                </div>
               </div>
-              <a class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
-                <span class="header-toggler-icon"></span>
-              </a>
             </div>
           </div>
         </div>
@@ -97,9 +95,11 @@
         </div>
       </footer>
     </div>
-    <script src="<?= base_url().'assets/js/vendors/jquery-3.2.1.min.js' ?>" type="text/javascript"></script>
-    <script src="<?= base_url().'assets/fonts/fontawesome/js/fontawesome.min.js' ?>" type="text/javascript"></script>
 
+    <script src="<?= base_url().'assets/js/vendors/jquery-3.2.1.min.js' ?>" type="text/javascript"></script>
+    <script src="<?= base_url().'assets/js/vendors/bootstrap.bundle.min.js' ?>" type="text/javascript"></script>
+    <script src="<?= base_url().'assets/js/core.js' ?>" type="text/javascript"></script>
+    <script src="<?= base_url().'assets/fonts/fontawesome/js/fontawesome.min.js' ?>" type="text/javascript"></script>
 
     <!-- Function load -->
     <script type="text/javascript">
