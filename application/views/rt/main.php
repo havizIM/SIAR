@@ -19,6 +19,34 @@
     <link rel="stylesheet" href="<?= base_url().'assets/fonts/fontawesome/css/fontawesome.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
 
+    <style media="screen">
+      .page .header{
+        background: #ecba7aeb;
+      }
+      #headerMenuCollapse{
+        background: #ecba7a;
+      }
+      .container ul li{
+        color: #fff;
+      }
+      .footer a:not(.btn) {
+        color: #ffffff;
+      }
+      .footer {
+        background: #ecba7a;
+        color: #ffffff;
+      }
+      .d-flex .header-brand img{
+        width: 75px;
+        height: 75px;
+      }
+      .d-flex .dropdown .nav-link {
+        margin-top: 30px;
+      }
+      .d-flex .dropdown .text-muted,.text-default{
+        color: #ffffff !important;
+    }
+    </style>
   </head>
   <body>
     <div class="page">
@@ -26,13 +54,15 @@
         <div class="header py-4">
           <div class="container">
             <div class="d-flex">
-              <!-- Taruh logo disini -->Logo Perusahaan
+              <a class="header-brand" href="#/dashboard">
+                <img src="<?= base_url().'image/logo.png' ?>" class="header-brand-img" alt="tabler logo">
+              </a>
               <div class="d-flex order-lg-1 ml-auto">
                 <div class="dropdown">
                   <a class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url("<?= base_url().'images/yugi.jpg' ?>")"></span>
+                    <span class="avatar" style="background-image: url(<?= base_url().'image/yugi.jpg' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Selamat Datang,</span>
+                      <span class="text-default"><strong>Selamat Datang ,</strong></span>
                       <small class="text-muted d-block mt-1">Yugi Setiawan</small>
                     </span>
                   </a>
@@ -59,13 +89,13 @@
               <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                   <li class="nav-item">
-                    <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i>Dashboard</a>
+                    <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i>RT 1</a>
+                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i><strong>RT 1</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i>RT 2</a>
+                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i><strong>RT 2</strong></a>
                   </li>
                 </ul>
               </div>
@@ -81,18 +111,9 @@
       <footer class="footer">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
-            <div class="col-auto ml-lg-auto">
-              <div class="row align-items-center">
-                <div class="col-auto">
-                  <ul class="list-inline list-inline-dots mb-0">
-                    <li class="list-inline-item"><a href="./docs/index.html">Documentation</a></li>
-                    <li class="list-inline-item"><a href="./faq.html">FAQ</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-              Copyright © 2018 <a href=".">SIAR</a>.All rights reserved.
+              <strong>Copyright © 2018 SIAR.All rights reserved.</strong>
             </div>
           </div>
         </div>

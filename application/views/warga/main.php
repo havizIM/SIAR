@@ -21,12 +21,31 @@
 
 <style media="screen">
   .page .header{
-        background: #cc3c3c;
+    background: #cc3c3c;
   }
-
+  #headerMenuCollapse{
+    background: #c33838;
+  }
   .container ul li{
     color: #fff;
   }
+  .footer a:not(.btn) {
+    color: #ffffff;
+  }
+  .footer {
+    background: #cc3c3c;
+    color: #ffffff;
+  }
+  .d-flex .header-brand img{
+    width: 75px;
+    height: 75px;
+  }
+  .d-flex .dropdown .nav-link {
+    margin-top: 30px;
+  }
+  .d-flex .dropdown .text-muted,.text-default{
+    color: #ffffff !important;
+}
 </style>
   </head>
   <body>
@@ -35,13 +54,15 @@
         <div class="header py-4">
           <div class="container">
             <div class="d-flex">
-              <!-- Taruh logo disini -->Logo Perusahaan
+              <a class="header-brand" href="#/dashboard">
+                <img src="<?= base_url().'image/logo.png' ?>" class="header-brand-img" alt="tabler logo">
+              </a>
               <div class="d-flex order-lg-1 ml-auto">
                 <div class="dropdown">
                   <a class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url("<?= base_url().'images/yugi.jpg' ?>")"></span>
+                    <span class="avatar" style="background-image: url(<?= base_url().'image/yugi.jpg' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Selamat Datang,</span>
+                      <span class="text-default"><strong>Selamat Datang ,</strong></span>
                       <small class="text-muted d-block mt-1">Yugi Setiawan</small>
                     </span>
                   </a>
@@ -81,27 +102,15 @@
             </div>
           </div>
         </div>
-        <div class="my-3 my-md-5">
-        </div>
       </div>
-      <div id="content">
+      <!-- <div id="content">
 
-      </div>
+      </div> -->
       <footer class="footer">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
-            <div class="col-auto ml-lg-auto">
-              <div class="row align-items-center">
-                <div class="col-auto">
-                  <ul class="list-inline list-inline-dots mb-0">
-                    <li class="list-inline-item"><a href="./docs/index.html">Documentation</a></li>
-                    <li class="list-inline-item"><a href="./faq.html">FAQ</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-              Copyright © 2018 <a href=".">SIAR</a>.All rights reserved.
+              <strong>Copyright © 2018 SIAR.All rights reserved.</strong>
             </div>
           </div>
         </div>
