@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Main extends CI_Controller {
 
  function index(){
-   $login ="";
-   $hak_akses ="Rt";
+   $login ="user";
+   $hak_akses ="Rw";
 
    if ($login == 'user') {
      $this->load->view('warga/main');
