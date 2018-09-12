@@ -39,5 +39,33 @@ class Auth extends CI_Controller {
     }
   }
 
+  function cekLoginAdmin() {
+		$username = $this->input->post('username');
+    $password = sha1($this->input->post('password'));
+
+    $where = array(
+      'username' =>  $username,
+      'password' => $password
+    );
+
+
+		$cek = $this->core->select('t_admin', $where);
+		if($cek->num_rows() == 1){
+      foreach($cek->result() as $key){
+        $level = $key->level;
+      }
+
+			$session = array(
+        'login' => 'Admin',
+        'level' => $level
+      );
+
+			$this->session->set_userdata($session);
+			echo "berhasil";
+		} else {
+			echo "gagal";
+		}
+	}
+
 }
 ?>

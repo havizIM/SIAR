@@ -5,12 +5,12 @@ class Main extends CI_Controller {
 
  function index(){
    $login = $this->session->userdata('login');
-   $hak_akses ="Rt";
+   $level = $this->session->userdata('level');
 
    if ($login == 'User') {
      $this->load->view('warga/main');
    }else {
-     switch ($hak_akses) {
+     switch ($level) {
 
         case 'Rt':
           $this->load->view('rt/main');
