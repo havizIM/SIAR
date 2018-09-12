@@ -124,6 +124,8 @@
       "showMethod": "fadeIn",
       "hideMethod": "fadeOut"
       }
+
+      
     });
 
 

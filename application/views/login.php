@@ -119,6 +119,15 @@
       "showMethod": "fadeIn",
       "hideMethod": "fadeOut"
       }
+
+// Function Show Password
+    $('.custom-control-input').click(function(){
+      if ($(this).is(':checked')) {
+        $('#password').attr('type','text');
+      }else{
+        $('#password').attr('type','password');
+      }
+    });
     });
 
     </script>
