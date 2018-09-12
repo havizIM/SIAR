@@ -67,5 +67,17 @@ class Auth extends CI_Controller {
 		}
 	}
 
+  function logout()
+  {
+    $this->session->sess_destroy();
+    redirect(base_url().'');
+  }
+
+  function logout_admin()
+  {
+    $this->session->sess_destroy();
+    redirect(base_url().'auth/admin');
+  }
+
 }
 ?>
