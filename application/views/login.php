@@ -22,6 +22,7 @@
     <link href="<?= base_url().'assets/plugins/maps-google/plugin.css' ?>" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
 
+
     <script src="<?= base_url().'assets/js/vendors/jquery-3.2.1.min.js' ?>"></script>
     <script src="<?= base_url().'assets/plugins/toastr/toastr.min.js' ?>"></script>
 
@@ -93,7 +94,7 @@
           }else {
             submit = true;
           }
-        }); //function menci data sudah terisi / belum
+        }); //function menciari data sudah terisi / belum
 
           if (submit == true ) {
             toastr.success('Berhasil nih yeee');
@@ -102,22 +103,22 @@
           }
       });
       toastr.options = {
-  "closeButton": false,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": false,
-  "positionClass": "toast-top-right",
-  "preventDuplicates": true,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "5000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-}
+      "closeButton": false,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": false,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": true,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+      }
     });
 
     </script>
