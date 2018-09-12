@@ -69,7 +69,7 @@
                     </label>
                   </div>
                   <div class="form-footer">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                    <button type="submit" id="btn_submit" class="btn btn-primary btn-lg btn-block">Login</button>
                   </div>
                 </div>
               </form>
@@ -87,19 +87,40 @@
         e.preventDefault(); //function untuk mematikan loading
 
         var submit = true;
-
+//function menciari data sudah terisi / belum
         $(this).find('#no_kk, #password').each(function(){
           if ($(this).val() == '' ) {
             submit = false;
           }else {
             submit = true;
           }
-        }); //function menciari data sudah terisi / belum
+        });
 
+//function Validasi login with Ajax
           if (submit == true ) {
-            toastr.success('Berhasil nih yeee');
+            $.ajax({
+              url: '<?= base_url().'auth/cekLogin' ?>',
+              type: 'POST',
+              cache: false,
+              beforeSend: function(){
+                $('#btn_submit').text('Processing.....');
+              },
+              data: $(this).serialize(),
+              success:function(respons){
+                if (respons == 'berhasil'){
+                  window.location = '<?= base_url().'main/' ?>';
+                }else {
+                  toastr.error('No KK atau Password salah','Error');
+                  $('#btn_submit').text('Login');
+                }
+                //Alert(data)
+              },
+              error: function(){
+                $('#btn_submit').text('Login');
+              }
+            });
           }else{
-            toastr.error('Gagal Shobb');
+            toastr.warning('Silahkan masukkan No KK dan Password');
           }
       });
       toastr.options = {

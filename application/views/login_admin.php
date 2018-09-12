@@ -74,7 +74,7 @@
                     </label>
                   </div>
                   <div class="form-footer">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                    <button type="submit" id="btn_submit" class="btn btn-primary btn-lg btn-block">Login</button>
                   </div>
                 </div>
               </form>
@@ -92,19 +92,39 @@
         e.preventDefault(); //function mematikan loading
 
         var submit = true;
-
+//function menci data sudah terisi / belum
         $(this).find('#username, #password').each(function(){
           if ($(this).val() == '' ) {
             submit = false;
           }else {
             submit = true;
           }
-        }); //function menci data sudah terisi / belum
-
+        });
+//Function Validasi Login with Ajax
         if (submit == true ) {
-          toastr.success('Berhasil nih yeee');
+          $.ajax({
+            url: '<?= base_url().'auth/cekLoginAdmin' ?>',
+            type: 'POST',
+            cache: false,
+            beforeSend: function(){
+              $('#btn_submit').text('Processing.....');
+            },
+            data: $(this).serialize(),
+            success: function(respons){
+              if (respons == 'berhasil') {
+                window.location = '<?= base_url().'main/' ?>';
+              }else {
+                  toastr.error('Username atau Password salah','Error');
+                  $('#btn_submit').text('Login');
+              }
+              //Alert(data)
+            },
+            error: function(){
+              $('#btn_submit').text('Login');
+            }
+          });
         }else{
-          toastr.error('Gagal Shobb');
+          toastr.warning('Silahkan masukkan Username dan Password');
         }
       });
       toastr.options = {
@@ -124,8 +144,14 @@
       "showMethod": "fadeIn",
       "hideMethod": "fadeOut"
       }
-
-      
+// Function Show Password
+    $('.custom-control-input').click(function(){
+      if($(this).is(':checked')){
+        $('#password').attr('type','text');
+      }else {
+        $('#password').attr('type','password')
+      }
+    });
     });
 
 
