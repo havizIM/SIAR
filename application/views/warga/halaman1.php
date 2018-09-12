@@ -1,2 +1,134 @@
-<h1>Halaman 1</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="my-3 my-md-5"></div>
+<div class="col-lg-12">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-body">
+            <h3 class="card-title">Edit Profile</h3>
+            <div class="row">
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Username</label>
+                  <input type="text" class="form-control" placeholder="Username" value="michael23">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Email address</label>
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" placeholder="Company" value="Chet">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Last Name" value="Faker">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label class="form-label">Address</label>
+                  <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-group">
+                  <label class="form-label">City</label>
+                  <input type="text" class="form-control" placeholder="City" value="Melbourne">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Postal Code</label>
+                  <input type="number" class="form-control" placeholder="ZIP Code">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label class="form-label">Country</label>
+                  <select class="form-control custom-select">
+                    <option value="">Germany</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-right">
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-body">
+            <h3 class="card-title">Edit Profile</h3>
+            <div class="row">
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Username</label>
+                  <input type="text" class="form-control" placeholder="Username" value="michael23">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Email address</label>
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" placeholder="Company" value="Chet">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Last Name" value="Faker">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label class="form-label">Address</label>
+                  <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="form-group">
+                  <label class="form-label">City</label>
+                  <input type="text" class="form-control" placeholder="City" value="Melbourne">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Postal Code</label>
+                  <input type="number" class="form-control" placeholder="ZIP Code">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label class="form-label">Country</label>
+                  <select class="form-control custom-select">
+                    <option value="">Germany</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-right">
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

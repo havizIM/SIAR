@@ -20,7 +20,6 @@
                           <th>###</th>
                           <th>###</th>
                           <th></th>
-                          <th></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -40,12 +39,6 @@
                             <span class="status-icon bg-success"></span> ###
                           </td>
                           <td>###</td>
-                          <td class="text-right">
-                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Manage</a>
-                            <div class="dropdown">
-                              <button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">Actions</button>
-                            </div>
-                          </td>
                           <td>
                             <a class="icon" href="javascript:void(0)">
                               <i class="fe fe-edit"></i>
@@ -68,12 +61,7 @@
                             <span class="status-icon bg-warning"></span> ###
                           </td>
                           <td>###</td>
-                          <td class="text-right">
-                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Manage</a>
-                            <div class="dropdown">
-                              <button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">Actions</button>
-                            </div>
-                          </td>
+
                           <td>
                             <a class="icon" href="javascript:void(0)">
                               <i class="fe fe-edit"></i>

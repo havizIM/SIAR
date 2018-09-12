@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
     <link rel="stylesheet" href="<?= base_url().'assets/fonts/fontawesome/css/fontawesome.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
+    <link rel="stylesheet" href="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.css' ?>">
+    <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
 
 <style media="screen">
   .page .header{
@@ -67,7 +69,7 @@
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" id="btn_pass">
                       <i class="dropdown-icon fe fe-lock"></i> Change Password
                     </a>
 
@@ -103,9 +105,9 @@
           </div>
         </div>
       </div>
-      <!-- <div id="content">
+      <div id="content">
 
-      </div> -->
+      </div>
       <footer class="footer">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
@@ -115,13 +117,36 @@
           </div>
         </div>
       </footer>
+
+    <!-- Modal Dialog -->
+      <div id="m_pass" title="Ganti Password">
+        <form id="form_pass">
+          <div class="form-group">
+            <label class="form-label"  >Password lama</label>
+            <input type="password" class="form-control" id="old_pass" name="old_pass" />
+          </div>
+          <div class="form-group">
+            <label class="form-label " >Password Baru</label>
+            <input type="password" class="form-control" id="new_pass" name="new_pass" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Ulangi Password</label>
+            <input type="password" class="form-control" id="rtp_pass" name="rtp_pass" />
+          </div>
+          <div class="form-grup">
+            <center><button type="submit" class="btn btn-primary">Simpan</button></center>
+          </div>
+        </form>
+      </div>
+      <!--/modal dialog  -->
     </div>
 
     <script src="<?= base_url().'assets/js/vendors/jquery-3.2.1.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/js/vendors/bootstrap.bundle.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/js/core.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/fonts/fontawesome/js/fontawesome.min.js' ?>" type="text/javascript"></script>
-
+    <script src="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.js' ?>" type="text/javascript"></script>
+    <script src="<?= base_url().'assets/plugins/toastr/toastr.min.js' ?>"></script>
     <!-- Function load -->
     <script type="text/javascript">
 
@@ -137,7 +162,7 @@
           });
         }
 
-        //Load halaman with URL
+//Load halaman with URL
         if(location.hash)
         {
           href = location.hash.substr(2);
@@ -147,15 +172,71 @@
           location.hash ='#/dashboard';
         }
 
-        // load halaman with Navigasi
+// load halaman with Navigasi
         $(window).on('hashchange',function(){
           href = location.hash.substr(2);
           load_content(href);
         });
 
+// Modal
+        $("#m_pass").dialog({
+            autoOpen: false,
+            modal: true,
+            draggable: false
+
+          });
+        $("#btn_pass").click(function(){
+          $("#m_pass").dialog("open");
+        });
+
+//Function validasi untuk ganti password
+        $('#form_pass').on('submit',function(e){
+          e.preventDefault(); //Mematikan loading
+
+          var submit = true;
+
+          $(this).find('#old_pass, #new_pass, #rtp_pass').each(function(){
+            if($(this).val() == ''){
+              submit = false;
+            }else{
+              submit = true;
+            }
+          });
+          if (submit == true ) {
+
+            if ($('#new_pass').val() != $('#rtp_pass').val() ){
+              toastr.warning('Password baru tidak sama')
+            }else {
+              toastr.success('Password berhasil di perbaharui')
+                $('#m_pass').dialog("close");
+                $('#form_pass')[0].reset();
+            }
+          }else{
+            toastr.error('Masukkan Password')
+          }
+        });
+        toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+        }
+
       });
 
     </script>
+
 
   </body>
 </html>
