@@ -26,7 +26,7 @@ class Auth extends CI_Controller {
       'password' => $password
     );
 
-    $cek = $this->core->select('t_keluarga', $where);
+    $cek = $this->core->select('t_user', $where);
     if($cek->num_rows() == 1){
       $session = array(
         'login' => 'User'
