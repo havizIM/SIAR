@@ -12,11 +12,11 @@ class Main extends CI_Controller {
    }else {
      switch ($level) {
 
-        case 'Rt':
+        case 'Ketua RT':
           $this->load->view('rt/main');
         break;
 
-        case 'Rw':
+        case 'Ketua RW':
           $this->load->view('rw/main');
         break;
 
