@@ -28,18 +28,26 @@
 
 <style media="screen">
   body{
-    background: url('<?= base_url().'image/background_warga.png' ?>');
+    background: url('<?= base_url().'image/background_peta.jpg' ?>');
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   .card{
     border-radius: 15px;
-    background-color: #d9dde8;
+    background-color: #ffffffd1;
   }
   .card img{
     width: 100px;
     height: 100px;
   }
+  .btn-lg, .btn-group-lg > .btn{
+        background-color: #ff4aa4;
+  }
+  .btn-primary:hover {
+    background-color: #f7258d;
+  }
+
 </style>
 
   </head>
@@ -51,7 +59,7 @@
             <div class="col col-login mx-auto">
               <form class="card " id="form-login">
                 <div class="card-body p-6">
-                  <div class="card-title text-center"> <img src="<?= base_url().'image/logo.png' ?>" alt=""> </div>
+                  <div class="card-title text-center"><strong><h2>Login SIAR</h2></strong></div>
                   <div class="form-group">
                     <label class="form-label">Nomor KK</label>
                     <input type="text" class="form-control" id="no_kk" name="no_kk" aria-describedby="emailHelp">
@@ -113,7 +121,7 @@
                   toastr.error('No KK atau Password salah','Error');
                   $('#btn_submit').text('Login');
                 }
-              
+
               },
               error: function(){
                 $('#btn_submit').text('Login');

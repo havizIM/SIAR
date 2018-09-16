@@ -21,14 +21,22 @@
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url().'image/logo.png' ?>">
 
 
 <style media="screen">
+
+  body{
+    background:
+    url('<?= base_url().'image/bg-02.png' ?>');
+    background-size: 100% 100%;
+    position: relative;
+  }
   .page .header{
-    background: #cc3c3c;
+    background: #ffffff;
   }
   #headerMenuCollapse{
-    background: #c33838;
+    background: #e41e7f;
   }
   .container ul li{
     color: #fff;
@@ -37,19 +45,25 @@
     color: #ffffff;
   }
   .footer {
-    background: #cc3c3c;
+    background: #e41e7f;
     color: #ffffff;
   }
-  .d-flex .header-brand img{
-    width: 75px;
-    height: 75px;
+  .header-brand img{
+    width: 340px;
+    height: 85px;
+    position:fixed;
   }
   .d-flex .dropdown .nav-link {
     margin-top: 30px;
   }
   .d-flex .dropdown .text-muted,.text-default{
-    color: #ffffff !important;
-}
+    color: black !important;
+    font-size: 17px;
+  }
+  .avatar{
+    width: 50px;
+    height: 50px;
+  }
 </style>
   </head>
   <body>
@@ -59,15 +73,16 @@
           <div class="container">
             <div class="d-flex">
               <a class="header-brand" href="#/dashboard">
-                <img src="<?= base_url().'image/logo.png' ?>" class="header-brand-img" alt="tabler logo">
+                <img src="<?= base_url().'image/logo-main.png' ?>" class="header-brand-img" alt="...">
               </a>
               <div class="d-flex order-lg-1 ml-auto">
                 <div class="dropdown">
                   <a class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url(<?= base_url().'image/yugi.jpg' ?>)"></span>
+                    <span class="avatar" style="background-image: url(<?= base_url().'image/logo-small.png' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default"><strong>Selamat Datang ,</strong></span>
-                      <small class="text-muted d-block mt-1">Yugi Setiawan</small>
+                      <small class="text-muted d-block mt-1">Yugi Setiawan<i class="fe fe-chevron-down"></i></small>
+
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">

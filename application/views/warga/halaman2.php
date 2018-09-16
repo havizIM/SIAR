@@ -5,8 +5,8 @@
                 <div class="card card-profile">
                   <div class="card-header" style="background-image: url(<?= base_url().'image/background_profile.jpeg' ?>);"></div>
                   <div class="card-body text-center">
-                    <img class="card-profile-img" src="<?= base_url().'image/yugi.jpg' ?>">
-                    <h3 class="mb-3">Yugi Setiawan</h3>
+                    <img class="card-profile-img" src="<?= base_url().'image/logo-small.png' ?>">
+                    <h3 class="mb-3">Dummy</h3>
                     <div class="table-responsive">
                     <table class="table card-table table-vcenter" style="font-size: 13px;">
 
@@ -51,8 +51,8 @@
                 <div class="card card-profile">
                   <div class="card-header" style="background-image: url(<?= base_url().'image/background_profile.jpeg' ?>);"></div>
                   <div class="card-body text-center">
-                    <img class="card-profile-img" src="<?= base_url().'image/yugi.jpg' ?>">
-                    <h3 class="mb-3">Yugi Setiawan</h3>
+                    <img class="card-profile-img" src="<?= base_url().'image/logo-small.png' ?>">
+                    <h3 class="mb-3">Dummy</h3>
                     <div class="table-responsive">
                     <table class="table card-table table-vcenter" style="font-size: 13px;">
 
@@ -97,8 +97,8 @@
                 <div class="card card-profile">
                   <div class="card-header" style="background-image: url(<?= base_url().'image/background_profile.jpeg' ?>);"></div>
                   <div class="card-body text-center">
-                    <img class="card-profile-img" src="<?= base_url().'image/yugi.jpg' ?>">
-                    <h3 class="mb-3">Yugi Setiawan</h3>
+                    <img class="card-profile-img" src="<?= base_url().'image/logo-small.png' ?>">
+                    <h3 class="mb-3">Dummy</h3>
                     <div class="table-responsive">
                     <table class="table card-table table-vcenter" style="font-size: 13px;">
 

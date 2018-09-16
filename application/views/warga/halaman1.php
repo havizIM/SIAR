@@ -54,36 +54,24 @@
       <div class="card">
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table card-table table-vcenter text-nowrap">
+            <table class="table card-table table-vcenter text-wrap">
               <thead>
                 <tr>
                   <th class="w-1">No.</th>
-                  <th>###</th>
-                  <th>###</th>
-                  <th>###</th>
-                  <th>###</th>
-                  <th>###</th>
-                  <th>###</th>
+                  <th>No.Kartu Keluarga</th>
+                  <th>NIK</th>
+                  <th>Nama</th>
+                  <th class="text-wrap">Keperluan</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><span class="text-muted">001401</span></td>
-                  <td><a href="invoice.html" class="text-inherit">Yugi Setiawan</a></td>
-                  <td>
-                    ###
-                  </td>
-                  <td>
-                    ###
-                  </td>
-                  <td>
-                    ###
-                  </td>
-                  <td>
-                    <span class="status-icon bg-success"></span> ###
-                  </td>
-                  <td>###</td>
+                  <td><span class="text-muted">001</span></td>
+                  <td>33010513079788818</td>
+                  <td>33010513079788818</td>
+                  <td>Dummy</td>
+                  <td>Membuat Surat SKTM</td>
                   <td>
                     <a class="icon" href="javascript:void(0)">
                       <i class="fe fe-edit"></i>
@@ -91,22 +79,11 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><span class="text-muted">001402</span></td>
-                  <td><a href="invoice.html" class="text-inherit">Dimas Kanjeng</a></td>
-                  <td>
-                    ###
-                  </td>
-                  <td>
-                    ###
-                  </td>
-                  <td>
-                    ###
-                  </td>
-                  <td>
-                    <span class="status-icon bg-warning"></span> ###
-                  </td>
-                  <td>###</td>
-
+                  <td><span class="text-muted">002</span></td>
+                  <td>33019929017389</td>
+                  <td>33019929017389</td>
+                  <td>Dummy 2</td>
+                  <td class="text-wrap">Pengajuan membuat Surat Pengantar E-KTP</td>
                   <td>
                     <a class="icon" href="javascript:void(0)">
                       <i class="fe fe-edit"></i>
@@ -143,4 +120,4 @@ $(document).ready(function(){
 
 
 </script>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
