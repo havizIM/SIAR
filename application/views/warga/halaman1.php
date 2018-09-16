@@ -1,134 +1,146 @@
+<!-- Form Pengajuan -->
 <div class="my-3 my-md-5"></div>
-<div class="col-lg-12">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <div class="card-body">
-            <h3 class="card-title">Edit Profile</h3>
-            <div class="row">
-              <div class="col-sm-6 col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Username</label>
-                  <input type="text" class="form-control" placeholder="Username" value="michael23">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Email address</label>
-                  <input type="email" class="form-control" placeholder="Email">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6">
-                <div class="form-group">
-                  <label class="form-label">First Name</label>
-                  <input type="text" class="form-control" placeholder="Company" value="Chet">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Last Name</label>
-                  <input type="text" class="form-control" placeholder="Last Name" value="Faker">
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="form-group">
-                  <label class="form-label">Address</label>
-                  <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="form-group">
-                  <label class="form-label">City</label>
-                  <input type="text" class="form-control" placeholder="City" value="Melbourne">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3">
-                <div class="form-group">
-                  <label class="form-label">Postal Code</label>
-                  <input type="number" class="form-control" placeholder="ZIP Code">
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="form-group">
-                  <label class="form-label">Country</label>
-                  <select class="form-control custom-select">
-                    <option value="">Germany</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="container">
+  <div class="col-lg-6">
+    <div class="card" id="form_pengajuan">
+      <div class="card-header">
+        <div class="card-title">
+          <h2>Form Pengajuan</h2>
         </div>
-        <div class="card-footer text-right">
-            <button type="submit" class="btn btn-primary">Update Profile</button>
-        </div>
-
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <div class="card-body">
-            <h3 class="card-title">Edit Profile</h3>
-            <div class="row">
-              <div class="col-sm-6 col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Username</label>
-                  <input type="text" class="form-control" placeholder="Username" value="michael23">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Email address</label>
-                  <input type="email" class="form-control" placeholder="Email">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6">
-                <div class="form-group">
-                  <label class="form-label">First Name</label>
-                  <input type="text" class="form-control" placeholder="Company" value="Chet">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Last Name</label>
-                  <input type="text" class="form-control" placeholder="Last Name" value="Faker">
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="form-group">
-                  <label class="form-label">Address</label>
-                  <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="form-group">
-                  <label class="form-label">City</label>
-                  <input type="text" class="form-control" placeholder="City" value="Melbourne">
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3">
-                <div class="form-group">
-                  <label class="form-label">Postal Code</label>
-                  <input type="number" class="form-control" placeholder="ZIP Code">
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="form-group">
-                  <label class="form-label">Country</label>
-                  <select class="form-control custom-select">
-                    <option value="">Germany</option>
-                  </select>
-                </div>
-              </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="form-grup">
+              <label class="form-label">No Kartu Keluarga</label>
+              <input type="number" name="no_kk" value="" class="form-control">
+            </div>
+            <div class="form-grup">
+              <label class="form-label">NIK</label>
+              <input type="number" name="no_kk" value="" class="form-control">
+            </div>
+            <div class="form-grup">
+              <label class="form-label">Nama Lengkap</label>
+              <input type="text" name="no_kk" value="" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-grup">
+              <label class="form-label">Keperluan</label>
+              <textarea name="name" rows="6" cols="45" class="form-control"></textarea>
             </div>
           </div>
         </div>
-        <div class="card-footer text-right">
-            <button type="submit" class="btn btn-primary">Update Profile</button>
+      </div>
+      <div class="card-footer">
+        <div class="btn-list text-right">
+          <button type="submit" class="btn btn-lg btn-primary" id="btn_simpan">Simpan</button>
+          <button type="submit" class="btn btn-lg btn-danger" id="btn_batal">Batal</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- /Form Pengajuan -->
+
+
+<div class="container">
+  <div class="page-header text-right">
+    <h1 class="page-title">Daftar Pengajuan</h1>
+    <button type="submit" id="btn_tambah" class="btn btn-primary ml-auto"> <i class="fe fe-plus"></i> Tambah Pengajuan </button>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table card-table table-vcenter text-nowrap">
+              <thead>
+                <tr>
+                  <th class="w-1">No.</th>
+                  <th>###</th>
+                  <th>###</th>
+                  <th>###</th>
+                  <th>###</th>
+                  <th>###</th>
+                  <th>###</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text-muted">001401</span></td>
+                  <td><a href="invoice.html" class="text-inherit">Yugi Setiawan</a></td>
+                  <td>
+                    ###
+                  </td>
+                  <td>
+                    ###
+                  </td>
+                  <td>
+                    ###
+                  </td>
+                  <td>
+                    <span class="status-icon bg-success"></span> ###
+                  </td>
+                  <td>###</td>
+                  <td>
+                    <a class="icon" href="javascript:void(0)">
+                      <i class="fe fe-edit"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="text-muted">001402</span></td>
+                  <td><a href="invoice.html" class="text-inherit">Dimas Kanjeng</a></td>
+                  <td>
+                    ###
+                  </td>
+                  <td>
+                    ###
+                  </td>
+                  <td>
+                    ###
+                  </td>
+                  <td>
+                    <span class="status-icon bg-warning"></span> ###
+                  </td>
+                  <td>###</td>
+
+                  <td>
+                    <a class="icon" href="javascript:void(0)">
+                      <i class="fe fe-edit"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- <div class="card-footer">
+
+      </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+  $('#btn_batal').click(function(){
+    $('#form_pengajuan').hide("blind",{direction:"up"});
+  });
+
+  $('#btn_tambah').click(function(){
+    $('#form_pengajuan').show("blind");
+  });
+
+  $('#form_pengajuan').hide();
+
+});
+
+
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>

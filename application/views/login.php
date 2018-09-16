@@ -113,7 +113,7 @@
                   toastr.error('No KK atau Password salah','Error');
                   $('#btn_submit').text('Login');
                 }
-                //Alert(data)
+              
               },
               error: function(){
                 $('#btn_submit').text('Login');

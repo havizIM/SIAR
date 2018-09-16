@@ -15,11 +15,13 @@
 
     <title>Warga | SIAR</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
     <link rel="stylesheet" href="<?= base_url().'assets/fonts/fontawesome/css/fontawesome.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
+
 
 <style media="screen">
   .page .header{
@@ -146,7 +148,8 @@
     <script src="<?= base_url().'assets/js/core.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/fonts/fontawesome/js/fontawesome.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.js' ?>" type="text/javascript"></script>
-    <script src="<?= base_url().'assets/plugins/toastr/toastr.min.js' ?>"></script>
+    <script src="<?= base_url().'assets/plugins/toastr/toastr.min.js' ?>" type="text/javascript"></script>
+
     <!-- Function load -->
     <script type="text/javascript">
 
@@ -161,6 +164,7 @@
             $('#content').html(content);
           });
         }
+
 
 //Load halaman with URL
         if(location.hash)
