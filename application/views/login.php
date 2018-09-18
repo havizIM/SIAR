@@ -29,7 +29,7 @@
 
 <style media="screen">
   body{
-    background: url('<?= base_url().'image/background_peta.jpg' ?>');
+    background: url('<?= base_url().'image/background_peta.png' ?>');
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -70,7 +70,7 @@
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a class="dropdown-item" id="btn_pass">
+                    <a class="dropdown-item" id="pass_btn">
                       <i class="dropdown-icon fe fe-lock"></i> Change Password
                     </a>
 
@@ -120,28 +120,39 @@
           </div>
         </div>
       </footer>
-      <!-- Modal Dialog -->
-      <div id="m_pass" title="Ganti Password">
-        <form id="form_pass">
-          <div class="form-group">
-            <label class="form-label"  >Password lama</label>
-            <input type="password" class="form-control" id="old_pass" name="old_pass" />
-          </div>
-          <div class="form-group">
-            <label class="form-label" >Password Baru</label>
-            <input type="password" class="form-control" id="new_pass" name="new_pass" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Ulangi Password</label>
-            <input type="password" class="form-control" id="rtp_pass" name="rtp_pass" />
-          </div>
-          <div class="form-grup">
-            <center><button type="submit" class="btn btn-primary">Simpan</button></center>
-          </div>
-        </form>
-      </div>
-      <!-- Modal -->
     </div>
+
+    <!-- Modal Dialog -->
+    <div class="modal-fade" id="modal_pass">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Ganti Password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="form_pass">
+              <div class="form-group">
+                <label class="form-label"  >Password lama</label>
+                <input type="password" class="form-control" id="old_pass" name="old_pass" />
+              </div>
+              <div class="form-group">
+                <label class="form-label " >Password Baru</label>
+                <input type="password" class="form-control" id="new_pass" name="new_pass" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Ulangi Password</label>
+                <input type="password" class="form-control" id="rtp_pass" name="rtp_pass" />
+              </div>
+              <div class="form-grup">
+                <center><button type="submit" class="btn btn-primary">Simpan</button></center>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    <!-- Modal -->
 
     <script src="<?= base_url().'assets/js/vendors/jquery-3.2.1.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/js/vendors/bootstrap.bundle.min.js' ?>" type="text/javascript"></script>
@@ -183,13 +194,8 @@
               });
 
 // Function modal
-              $('#m_pass').dialog({
-                autoOpen: false,
-                modal:true,
-                draggable: false
-              });
-              $('#btn_pass').click(function(){
-                $('#m_pass').dialog("open");
+              $('#pass_btn').on('click',function(){
+                $('#modal_pass').modal('show');
               });
 // Function Validasi ganti password
               $('#form_pass').on('submit', function(e){
