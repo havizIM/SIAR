@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
+    <link rel="stylesheet" href="<?= base_url().'assets/css/animate/animate.css' ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url().'image/logo.png' ?>">
 
 
@@ -28,9 +29,9 @@
 <style media="screen">
 
   body{
-    background:
-    url('<?= base_url().'image/bg-02.png' ?>');
-    background-size: 100% 100%;
+    background:url('<?= base_url().'image/bg-02.png' ?>');
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
   }
   .page .header{
@@ -65,6 +66,15 @@
     width: 50px;
     height: 50px;
   }
+  .modal-header{
+    background-color:#e41e7f;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+  }
+  .close{
+    color: #ffffff;
+  }
 </style>
   </head>
   <body>
@@ -87,7 +97,7 @@
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a class="dropdown-item" id="pass_btn">
+                    <a class="dropdown-item" id="btn_pass">
                       <i class="dropdown-icon fe fe-lock"></i> Change Password
                     </a>
 
@@ -140,34 +150,34 @@
 
     <!-- Modal bottstrap -->
 
-<div class="modal" id="modal_pass">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Ganti Password</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form id="form_pass">
-          <div class="form-group">
-            <label class="form-label"  >Password lama</label>
-            <input type="password" class="form-control" id="old_pass" name="old_pass" />
-          </div>
-          <div class="form-group">
-            <label class="form-label " >Password Baru</label>
-            <input type="password" class="form-control" id="new_pass" name="new_pass" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Ulangi Password</label>
-            <input type="password" class="form-control" id="rtp_pass" name="rtp_pass" />
-          </div>
-          <div class="form-grup">
-            <center><button type="submit" class="btn btn-primary">Simpan</button></center>
-          </div>
-        </form>
+  <div class="modal animated bounceInDown delay-2s" id="modal_pass">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title">Ganti Password</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form_pass">
+            <div class="form-group">
+              <label class="form-label"  >Password lama</label>
+              <input type="password" class="form-control" id="old_pass" name="old_pass" />
+            </div>
+            <div class="form-group">
+              <label class="form-label " >Password Baru</label>
+              <input type="password" class="form-control" id="new_pass" name="new_pass" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Ulangi Password</label>
+              <input type="password" class="form-control" id="rtp_pass" name="rtp_pass" />
+            </div>
+            <div class="form-grup">
+              <center><button type="submit" class="btn btn-primary">Simpan</button></center>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 
     <script src="<?= base_url().'assets/js/vendors/jquery-3.2.1.min.js' ?>" type="text/javascript"></script>
@@ -212,7 +222,7 @@
 
 
 // modal bootstrap
-        $("#pass_btn").on('click',function(){
+        $("#btn_pass").on('click',function(){
           $("#modal_pass").modal('show');
         });
 
@@ -247,7 +257,7 @@
         "debug": false,
         "newestOnTop": false,
         "progressBar": false,
-        "positionClass": "toast-top-center",
+        "positionClass": "toast-top-right",
         "preventDuplicates": true,
         "onclick": null,
         "showDuration": "300",

@@ -20,14 +20,16 @@
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.css' ?>">
+    <link rel="stylesheet" href="<?= base_url().'assets/css/animate/animate.css' ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url().'image/logo.png' ?>">
 
     <style media="screen">
+
       .page .header{
-        background: #ecba7aeb;
+        background: #ffffff;
       }
       #headerMenuCollapse{
-        background: #ecba7a;
+        background: #034ea2;
       }
       .container ul li{
         color: #fff;
@@ -36,19 +38,26 @@
         color: #ffffff;
       }
       .footer {
-        background: #ecba7a;
+        background: #034ea2;
         color: #ffffff;
       }
-      .d-flex .header-brand img{
-        width: 75px;
-        height: 75px;
-      }
+
       .d-flex .dropdown .nav-link {
         margin-top: 30px;
       }
       .d-flex .dropdown .text-muted,.text-default{
-        color: #ffffff !important;
-    }
+        color: black !important;
+        font-size: 17px;
+      }
+      .avatar{
+        width: 50px;
+        height: 50px;
+      }
+      .header-brand img{
+        width: 400px;
+        height: 85px;
+        position:relative;
+      }
     </style>
   </head>
   <body>
@@ -58,19 +67,19 @@
           <div class="container">
             <div class="d-flex">
               <a class="header-brand" href="#/dashboard">
-                <img src="<?= base_url().'image/logo.png' ?>" class="header-brand-img" alt="tabler logo">
+                <img src="<?= base_url().'image/logo-main-1.png' ?>" class="header-brand-img" alt="tabler logo">
               </a>
               <div class="d-flex order-lg-1 ml-auto">
                 <div class="dropdown">
                   <a class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url(<?= base_url().'image/yugi.jpg' ?>)"></span>
+                    <span class="avatar" style="background-image: url(<?= base_url().'image/logo-small.png' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default"><strong>Selamat Datang ,</strong></span>
-                      <small class="text-muted d-block mt-1">Yugi Setiawan</small>
+                      <small class="text-muted d-block mt-1">Special Dummy</small>
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a class="dropdown-item" id="pass_btn">
+                    <a class="dropdown-item" id="btn_pass">
                       <i class="dropdown-icon fe fe-lock"></i> Change Password
                     </a>
 
@@ -123,11 +132,11 @@
     </div>
 
     <!-- Modal Dialog -->
-    <div class="modal-fade" id="modal_pass">
+    <div class="modal animated bounceInDown delay-2s" id="modal_pass">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Ganti Password</h5>
+            <h1 class="modal-title"><center>Ganti Password</center></h1>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -194,7 +203,7 @@
               });
 
 // Function modal
-              $('#pass_btn').on('click',function(){
+              $('#btn_pass').on('click',function(){
                 $('#modal_pass').modal('show');
               });
 // Function Validasi ganti password

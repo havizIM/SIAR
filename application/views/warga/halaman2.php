@@ -2,7 +2,7 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-4">
-                <div class="card card-profile">
+                <div class="card card-profile animated zoomIn delay-2s">
                   <div class="card-header" style="background-image: url(<?= base_url().'image/background_profile.jpeg' ?>);"></div>
                   <div class="card-body text-center">
                     <img class="card-profile-img" src="<?= base_url().'image/logo-small.png' ?>">
@@ -48,7 +48,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div class="card card-profile">
+                <div class="card card-profile animated zoomIn delay-2s">
                   <div class="card-header" style="background-image: url(<?= base_url().'image/background_profile.jpeg' ?>);"></div>
                   <div class="card-body text-center">
                     <img class="card-profile-img" src="<?= base_url().'image/logo-small.png' ?>">
@@ -94,7 +94,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div class="card card-profile">
+                <div class="card card-profile animated zoomIn delay-3s">
                   <div class="card-header" style="background-image: url(<?= base_url().'image/background_profile.jpeg' ?>);"></div>
                   <div class="card-body text-center">
                     <img class="card-profile-img" src="<?= base_url().'image/logo-small.png' ?>">

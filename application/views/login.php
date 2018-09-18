@@ -56,10 +56,10 @@
   <body>
     <div class="page">
       <div class="page-single">
-        <div class="container">
+        <div class="container ">
           <div class="row">
             <div class="col col-login mx-auto">
-              <form class="card " id="form-login">
+              <form class="card" id="form-login">
                 <div class="card-body p-6">
                   <div class="card-title text-center"><strong><h2>Login SIAR</h2></strong></div>
                   <div class="form-group">

@@ -20,14 +20,15 @@
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.css' ?>">
+    <link rel="stylesheet" href="<?= base_url().'assets/css/animate/animate.css' ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url().'image/logo.png' ?>">
 
     <style media="screen">
       .page .header{
-        background: #ecba7aeb;
+        background: #ffffff;
       }
       #headerMenuCollapse{
-        background: #ecba7a;
+        background: #034ea2;
       }
       .container ul li{
         color: #fff;
@@ -36,19 +37,25 @@
         color: #ffffff;
       }
       .footer {
-        background: #ecba7a;
+        background: #034ea2;
         color: #ffffff;
       }
-      .d-flex .header-brand img{
-        width: 75px;
-        height: 75px;
+      .header-brand img{
+        width: 400px;
+        height: 85px;
+        position:relative;
       }
       .d-flex .dropdown .nav-link {
         margin-top: 30px;
       }
       .d-flex .dropdown .text-muted,.text-default{
-        color: #ffffff !important;
-    }
+        color: black !important;
+        font-size: 17px;
+      }
+      .avatar{
+        width: 50px;
+        height: 50px;
+      }
     </style>
   </head>
   <body>
@@ -58,15 +65,15 @@
           <div class="container">
             <div class="d-flex">
               <a class="header-brand" href="#/dashboard">
-                <img src="<?= base_url().'image/logo.png' ?>" class="header-brand-img" alt="tabler logo">
+                <img src="<?= base_url().'image/logo-main-1.png' ?>" class="header-brand-img" alt="tabler logo">
               </a>
               <div class="d-flex order-lg-1 ml-auto">
                 <div class="dropdown">
                   <a class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url(<?= base_url().'image/yugi.jpg' ?>)"></span>
+                    <span class="avatar" style="background-image: url(<?= base_url().'image/logo-small.png' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default"><strong>Selamat Datang ,</strong></span>
-                      <small class="text-muted d-block mt-1">Yugi Setiawan</small>
+                      <small class="text-muted d-block mt-1">Special Dummy</small>
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -121,25 +128,35 @@
           </div>
         </div>
       </footer>
-      <!-- Modal -->
-      <div id="m_pass" title="Ganti Password">
-        <form id="form_pass">
-          <div class="form-group">
-            <label class="form-label">Password Lama</label>
-            <input type="password" class="form-control" name="old_pass" id="old_pass" >
+    </div>
+    <!-- Modal Form -->
+    <div class="modal animated bounceInDown delay-2s" id="modal_pass">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Ganti Password</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="form-group">
-            <label class="form-label">Password Baru</label>
-            <input type="password" class="form-control" name="new_pass" id="new_pass">
+          <div class="modal-body">
+            <form id="form_pass">
+              <div class="form-group">
+                <label class="form-label"  >Password lama</label>
+                <input type="password" class="form-control" id="old_pass" name="old_pass" />
+              </div>
+              <div class="form-group">
+                <label class="form-label " >Password Baru</label>
+                <input type="password" class="form-control" id="new_pass" name="new_pass" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Ulangi Password</label>
+                <input type="password" class="form-control" id="rtp_pass" name="rtp_pass" />
+              </div>
+              <div class="form-grup">
+                <center><button type="submit" class="btn btn-primary">Simpan</button></center>
+              </div>
+            </form>
           </div>
-          <div class="form-group">
-            <label class="form-label">Ulangi Password</label>
-            <input type="password" class="form-control" name="rtp_pass" id="rtp_pass">
-          </div>
-          <div class="form-group">
-            <center><button type="submit" class="btn btn-primary">Simpan</button></center>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
 
@@ -180,14 +197,9 @@
           load_content(href);
         });
 // Modal
-        $('#m_pass').dialog({
-          autoOpen: false,
-          modal: true,
-          draggable: false
-        });
-        $('#btn_pass').click(function(){
-          $('#m_pass').dialog("open");
-        });
+      $('#btn_pass').on('click',function(){
+        $('#modal_pass').modal('show');
+      });
 //Function validasi ganti password
       $('#form_pass').on('submit',function(e){
         e.preventDefault();
