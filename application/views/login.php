@@ -29,14 +29,15 @@
 
 <style media="screen">
   body{
-    background: url('<?= base_url().'image/background_peta.png' ?>');
+    background: url('<?= base_url().'image/kost-penjaringan-Jakarta_Utara.png' ?>');
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .card{
     border-radius: 15px;
-    background-color: #ffffffd1;
+    background-color: #fffffff5;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.66);
   }
   .card img{
     width: 100px;
