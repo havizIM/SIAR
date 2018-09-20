@@ -186,6 +186,7 @@
     <script src="<?= base_url().'assets/fonts/fontawesome/js/fontawesome.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/plugins/toastr/toastr.min.js' ?>" type="text/javascript"></script>
+    <script src="<?= base_url().'assets/js/wow/wow.min.js' ?>"type="text/javascript"></script>
 
 
     <!-- Function load -->

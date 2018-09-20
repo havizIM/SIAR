@@ -102,10 +102,10 @@
                     <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i><strong>RT 1</strong></a>
+                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i><strong>Pengajuan</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i><strong>RT 2</strong></a>
+                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i><strong>Warga</strong></a>
                   </li>
                 </ul>
               </div>
