@@ -7,12 +7,12 @@ class Warga extends CI_Controller {
 		$this->load->view('warga/dashboard');
 	}
 
-  function halaman1(){
-    $this->load->view('warga/halaman1');
+  function pengajuan(){
+    $this->load->view('warga/pengajuan');
   }
 
-  function halaman2(){
-    $this->load->view('warga/halaman2');
+  function profil_keluarga(){
+    $this->load->view('warga/profil_keluarga');
   }
 }
 ?>

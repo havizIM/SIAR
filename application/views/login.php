@@ -21,6 +21,7 @@
     <link href="<?= base_url().'assets/plugins/charts-c3/plugin.css' ?>" rel="stylesheet" />
     <link href="<?= base_url().'assets/plugins/maps-google/plugin.css' ?>" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
+    <link rel="stylesheet" href="<?= base_url().'assets/css/animate/animate.css' ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url().'image/logo.png' ?>">
 
 
@@ -59,9 +60,11 @@
         <div class="container ">
           <div class="row">
             <div class="col col-login mx-auto">
-              <form class="card" id="form-login">
+              <form class="card animated bounceIn" id="form-login">
                 <div class="card-body p-6">
-                  <div class="card-title text-center"><strong><h2>Login SIAR</h2></strong></div>
+                  <div class="card-title text-center">
+                    <strong><h2>Login SIAR</h2></strong>
+                  </div>
                   <div class="form-group">
                     <label class="form-label">Nomor KK</label>
                     <input type="text" class="form-control" id="no_kk" name="no_kk" aria-describedby="emailHelp">
@@ -113,7 +116,7 @@
               type: 'POST',
               cache: false,
               beforeSend: function(){
-                $('#btn_submit').text('Processing.....');
+                $('#btn_submit').addClass('btn-loading');
               },
               data: $(this).serialize(),
               success:function(respons){
@@ -121,7 +124,7 @@
                   window.location = '<?= base_url().'main/' ?>';
                 }else {
                   toastr.error('No KK atau Password salah','Error');
-                  $('#btn_submit').text('Login');
+                  $('#btn_submit').removeClass('btn-loading');
                 }
 
               },

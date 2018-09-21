@@ -82,7 +82,7 @@
                     </a>
 
                     <a class="dropdown-item" href="<?= base_url().'auth/logout_admin' ?>">
-                      <i class="dropdown-icon fe fe-log-out"></i> Logout
+                      <i class="dropdown-icon fe fe-power"></i> Logout
                     </a>
                   </div>
                 </div>

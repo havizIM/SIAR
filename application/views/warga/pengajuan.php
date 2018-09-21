@@ -44,7 +44,7 @@
 <!-- /Form Pengajuan -->
 
 
-<div class="container">
+<div class="container ">
   <div class="page-header text-right">
     <h1 class="page-title">Daftar Pengajuan</h1>
     <button type="submit" id="btn_tambah" class="btn btn-primary ml-auto"> <i class="fe fe-plus"></i> Tambah Pengajuan </button>

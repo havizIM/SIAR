@@ -15,6 +15,7 @@
 
     <title>RW | SIAR</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
     <link rel="stylesheet" href="<?= base_url().'assets/fonts/fontawesome/css/fontawesome.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
@@ -84,7 +85,7 @@
                     </a>
 
                     <a class="dropdown-item" href="<?= base_url().'auth/logout_admin' ?>">
-                      <i class="dropdown-icon fe fe-log-out"></i> Logout
+                      <i class="dropdown-icon fe fe-power"></i> Logout
                     </a>
                   </div>
                 </div>
@@ -104,10 +105,13 @@
                     <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i><strong>RW 1</strong></a>
+                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i><strong>Pengajuan</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i><strong>RW 2</strong></a>
+                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i><strong>Warga</strong></a>
+                  </li>
+                  <li class="nav-item">
+                  <a href="#/halaman3" class="nav-link"> <i class="fe fe-clipboard"></i><strong>Laporan</strong> </a>
                   </li>
                 </ul>
               </div>

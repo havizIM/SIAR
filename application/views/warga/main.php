@@ -75,9 +75,19 @@
   .close{
     color: #ffffff;
   }
+  /*================================================
+            		Parallax
+  ================================================*/
+
+  .bg-parallax {
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: center;
+  	background-attachment: fixed;
+  }
 </style>
   </head>
-  <body>
+  <body class="bg-parallax">
     <div class="page">
       <div class="page-main">
         <div class="header py-4">
@@ -102,7 +112,7 @@
                     </a>
 
                     <a class="dropdown-item" href="<?= base_url().'auth/logout'?>">
-                      <i class="dropdown-icon fe fe-log-out"></i> Logout
+                      <i class="dropdown-icon fe fe-power"></i> Logout
                     </a>
                   </div>
                 </div>
@@ -122,10 +132,10 @@
                     <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i> <strong>Pengajuan</strong> </a>
+                    <a href="#/pengajuan" class="nav-link"><i class="fe fe-file-text"></i> <strong>Pengajuan</strong> </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i> <strong>Profile Keluarga</strong> </a>
+                    <a href="#/profil_keluarga" class="nav-link"><i class="fe fe-users"></i> <strong>Profile Keluarga</strong> </a>
                   </li>
                 </ul>
               </div>
@@ -187,6 +197,9 @@
     <script src="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/plugins/toastr/toastr.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/js/wow/wow.min.js' ?>"type="text/javascript"></script>
+
+
+    </script>
 
 
     <!-- Function load -->

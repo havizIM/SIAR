@@ -14,5 +14,9 @@ class Rw extends CI_Controller {
   function halaman2(){
     $this->load->view('rw/halaman2');
   }
+
+  function halaman3(){
+    $this->load->view('rw/halaman3');
+  }
 }
 ?>
