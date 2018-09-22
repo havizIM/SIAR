@@ -1,38 +1,37 @@
 <div class="my-3 my-md-5"></div>
 <div class="container">
-    <div class="row row-cards">
-      <div class="col-6 col-sm-4 col-lg-2">
-        <div class="card animated">
-          <div class="card-body p-3 text-center">
-            <div class="text-right text-green">
-              6%
-              <i class="fe fe-chevron-up"></i>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card animated bounceIn">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2">
+              <i class="fa fa-copy fa-5x text-primary" style="font-size:100px;"></i>
             </div>
-            <div class="h1 m-0">43</div>
-            <div class="text-muted mb-4">New Tickets</div>
+            <div class="col-md-10 text-right">
+              <div class="h3" style="margin-bottom:0px;">Jumlah Pengajuan</div>
+              <div class="h1 text-pink" style="font-size:75px; margin-bottom:0px;">2</div>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body p-3 text-center">
-            <div class="text-right text-green">
-              6%
-              <i class="fe fe-chevron-up"></i>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card animated bounceIn">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-2">
+              <i class="fa fa-users fa-5x text-primary" style="font-size:100px;"></i>
             </div>
-            <div class="h1 m-0">43</div>
-            <div class="text-muted mb-4">New Tickets</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body p-3 text-center">
-            <div class="text-right text-green">
-              6%
-              <i class="fe fe-chevron-up"></i>
+            <div class="col-md-10 text-right">
+              <div class="h3" style="margin-bottom:0px;">Jumlah Anggota Keluarga</div>
+              <div class="h1 text-pink" style="font-size:75px; margin-bottom:0px;">3</div>
             </div>
-            <div class="h1 m-0">43</div>
-            <div class="text-muted mb-4">New Tickets</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div><br><br><br><br>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

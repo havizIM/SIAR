@@ -74,7 +74,7 @@
                   <td>Membuat Surat SKTM</td>
                   <td>
                     <a class="icon" href="javascript:void(0)">
-                      <i class="fe fe-edit"></i>
+                      <i class="fa fa-edit fa-lg text-green"></i>
                     </a>
                   </td>
                 </tr>
@@ -86,7 +86,7 @@
                   <td class="text-wrap">Pengajuan membuat Surat Pengantar E-KTP</td>
                   <td>
                     <a class="icon" href="javascript:void(0)">
-                      <i class="fe fe-edit"></i>
+                      <i class="fa fa-edit fa-lg text-green"></i>
                     </a>
                   </td>
                 </tr>
@@ -120,4 +120,4 @@ $(document).ready(function(){
 
 
 </script>
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
