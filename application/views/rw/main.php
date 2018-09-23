@@ -105,21 +105,21 @@
                     <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i><strong>Pengajuan</strong></a>
+                    <a href="#/pengajuan" class="nav-link"><i class="fe fe-file-text"></i><strong>Pengajuan</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i><strong>Warga</strong></a>
+                    <a href="#/warga" class="nav-link"><i class="fe fe-users"></i><strong>Warga</strong></a>
                   </li>
                   <li class="nav-item">
-                  <a href="#/halaman3" class="nav-link"> <i class="fe fe-clipboard"></i><strong>Laporan</strong> </a>
+                  <a href="#/laporan" class="nav-link"> <i class="fe fe-clipboard"></i><strong>Laporan</strong> </a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="my-3 my-md-5">
-        </div>
+      </div>
+      <div class="my-3 my-md-5">
       </div>
       <div id="content">
 

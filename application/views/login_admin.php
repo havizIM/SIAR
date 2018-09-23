@@ -21,6 +21,7 @@
     <link href="<?= base_url().'assets/plugins/charts-c3/plugin.css' ?>" rel="stylesheet" />
     <link href="<?= base_url().'assets/plugins/maps-google/plugin.css' ?>" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url().'assets/plugins/toastr/toastr.min.css' ?>">
+    <link rel="stylesheet" href="<?= base_url().'assets/css/animate/animate.css' ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url().'image/logo.png' ?>">
 
     <script src="<?= base_url().'assets/js/vendors/jquery-3.2.1.min.js' ?>"></script>
@@ -50,7 +51,7 @@
         <div class="container">
           <div class="row">
             <div class="col col-login mx-auto">
-              <form class="card" id="form-login">
+              <form class="card animated bounceIn" id="form_login">
                 <div class="card-body p-6">
                   <div class="card-title text-center"> <img src="<?= base_url().'image/logo.png' ?>" alt=""> </div>
                   <div class="form-group">
@@ -90,7 +91,7 @@
     <script type="text/javascript">
 
     $(document).ready(function(){
-      $('#form-login').on('submit',function(e){
+      $('#form_login').on('submit',function(e){
         e.preventDefault(); //function mematikan loading
 
         var submit = true;
@@ -109,7 +110,7 @@
             type: 'POST',
             cache: false,
             beforeSend: function(){
-              $('#btn_submit').text('Processing.....');
+              $('#btn_submit').addClass('btn-loading');
             },
             data: $(this).serialize(),
             success: function(respons){
@@ -117,7 +118,7 @@
                 window.location = '<?= base_url().'main/' ?>';
               }else {
                   toastr.error('Username atau Password salah','Error');
-                  $('#btn_submit').text('Login');
+                  $('#btn_submit').removeClass('btn-loading');
               }
               //Alert(data)
             },

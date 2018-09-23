@@ -7,16 +7,16 @@ class Rw extends CI_Controller {
 		$this->load->view('rw/dashboard');
 	}
 
-  function halaman1(){
-    $this->load->view('rw/halaman1');
+  function pengajuan(){
+    $this->load->view('rw/pengajuan');
   }
 
-  function halaman2(){
-    $this->load->view('rw/halaman2');
+  function warga(){
+    $this->load->view('rw/warga');
   }
 
-  function halaman3(){
-    $this->load->view('rw/halaman3');
+  function laporan(){
+    $this->load->view('rw/laporan');
   }
 }
 ?>
