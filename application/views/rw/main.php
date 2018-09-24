@@ -59,6 +59,18 @@
         height: 85px;
         position:relative;
       }
+      #data{
+        animation-delay: .1s;
+        animation-duration: 1s;
+      }
+      #data2{
+        animation-delay: .3s;
+        animation-duration: 1s;
+      }
+      #data3{
+        animation-delay: .5s;
+        animation-duration: 1s;
+      }
     </style>
   </head>
   <body>

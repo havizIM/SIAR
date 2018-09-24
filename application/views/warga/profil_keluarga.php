@@ -1,6 +1,6 @@
 <div class="my-3 my-md-5"></div>
 <div class="container">
-  <div class="card animated zoomInDown" style="border:2px solid #e41e7f; box-shadow: 0 3px 14px rgba(0, 0, 0, 0.66);">
+  <div class="card animated zoomInDown" id="animate" style="border:2px solid #e41e7f; box-shadow: 0 3px 14px rgba(0, 0, 0, 0.66);">
     <div class="card-body">
       <div class="card-title text-center">
         <h1 style="font-size:50px; font-weight: 700;">KARTU <span style="color:#e41e7f;">KELUARGA</span></h1>

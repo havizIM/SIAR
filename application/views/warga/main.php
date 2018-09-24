@@ -49,6 +49,7 @@
   .footer {
     background: #e41e7f;
     color: #ffffff;
+    padding: 0;
   }
   .header-brand img{
     width: 400px;
@@ -75,6 +76,18 @@
   .close{
     color: #ffffff;
   }
+ #data1{
+   animation-delay: .1s;
+   animation-duration: 1s;
+ }
+ #data2{
+   animation-delay: .3s;
+   animation-duration: 1s;
+ }
+
+ #content{
+   margin-top: 175px;
+ }
 
   /*================================================
             		Parallax
@@ -86,11 +99,12 @@
   	background-position: center;
   	background-attachment: fixed;
   }
+
 </style>
   </head>
   <body class="bg-parallax">
     <div class="page">
-      <div class="page-main">
+      <div class="page-main fixed-top">
         <div class="header py-4">
           <div class="container">
             <div class="d-flex">
@@ -103,7 +117,7 @@
                     <span class="avatar" style="background-image: url(<?= base_url().'image/logo-small.png' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default"><strong>Selamat Datang ,</strong></span>
-                      <small class="text-muted d-block mt-1">Yugi Setiawan<i class="fe fe-chevron-down"></i></small>
+                      <small class="text-muted d-block mt-1">Dumy Special<i class="fe fe-chevron-down"></i></small>
 
                     </span>
                   </a>

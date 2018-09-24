@@ -1,8 +1,9 @@
 <div class="my-3 my-md-5"></div>
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
-      <div class="card animated bounceIn">
+
+    <div class="col-lg-6">
+      <div class="card animated zoomIn" id="data1">
         <div class="card-body">
           <div class="row">
             <div class="col-md-2">
@@ -16,8 +17,8 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="card animated bounceIn">
+    <div class="col-lg-6">
+      <div class="card animated zoomIn" id="data2">
         <div class="card-body">
           <div class="row">
             <div class="col-md-2">
@@ -31,7 +32,8 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

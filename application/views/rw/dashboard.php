@@ -12,7 +12,7 @@
           </div>
         </div>
       </div>
-      <div class="card p-3 animated zoomIn">
+      <div class="card p-3 animated zoomIn" id="data2">
         <div class="d-flex align-items-center">
           <div class="col-md-2">
             <i class="fa fa-users fa-5x text-primary" style="font-size:75px;"></i>
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-      <div class="card p-3 animated zoomIn">
+      <div class="card p-3 animated zoomIn" id="data3">
         <div class="d-flex align-items-center">
           <div class="col-md-2">
             <i class="fe fe-clipboard fa-5x text-primary" style="font-size:75px;"></i>
