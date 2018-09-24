@@ -44,14 +44,14 @@
 <!-- /Form Pengajuan -->
 
 
-<div class="container ">
+<div class="container">
   <div class="page-header text-right">
-    <h1 class="page-title">Daftar Pengajuan</h1>
-    <button type="submit" id="btn_tambah" class="btn btn-primary ml-auto"> <i class="fe fe-plus"></i> Tambah Pengajuan </button>
+    <h1 class="page-title animated bounceIn">Daftar Pengajuan</h1>
+    <button type="submit" id="btn_tambah" class="btn btn-primary ml-auto animated bounceIn"> <i class="fe fe-plus"></i> Tambah Pengajuan </button>
   </div>
   <div class="row">
     <div class="col-12">
-      <div class="card animated">
+      <div class="card animated zoomIn">
         <div class="card-body ">
           <div class="table-responsive">
             <table class="table card-table table-vcenter text-wrap">
