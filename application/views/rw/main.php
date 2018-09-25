@@ -41,6 +41,7 @@
       .footer {
         background: #034ea2;
         color: #ffffff;
+        padding:5px;
       }
 
       .d-flex .dropdown .nav-link {
@@ -71,11 +72,14 @@
         animation-delay: .5s;
         animation-duration: 1s;
       }
+      #content{
+        margin-top: 165px;
+      }
     </style>
   </head>
   <body>
     <div class="page">
-      <div class="page-main">
+      <div class="page-main fixed-top">
         <div class="header py-4">
           <div class="container">
             <div class="d-flex">
@@ -136,7 +140,7 @@
       <div id="content">
 
       </div>
-      <footer class="footer">
+      <footer class="footer fixed-bottom">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">

@@ -56,11 +56,14 @@
         width: 50px;
         height: 50px;
       }
+      #content{
+        margin-top: 165px;
+      }
     </style>
   </head>
   <body>
     <div class="page">
-      <div class="page-main">
+      <div class="page-main fixed-top">
         <div class="header py-4">
           <div class="container">
             <div class="d-flex">
@@ -118,7 +121,7 @@
       <div id="content">
 
       </div>
-      <footer class="footer">
+      <footer class="footer fixed-bottom">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
 

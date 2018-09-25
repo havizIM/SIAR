@@ -49,7 +49,7 @@
   .footer {
     background: #e41e7f;
     color: #ffffff;
-    padding: 0;
+    padding: 5px;
   }
   .header-brand img{
     width: 400px;
@@ -85,9 +85,9 @@
    animation-duration: 1s;
  }
 
- /* #content{
+ #content{
    margin-top: 165px;
- } */
+ }
 
 
   /*================================================
@@ -105,7 +105,7 @@
   </head>
   <body class="bg-parallax">
     <div class="page">
-      <div class="page-main">
+      <div class="page-main fixed-top">
         <div class="header py-4">
           <div class="container">
             <div class="d-flex">
@@ -119,7 +119,6 @@
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default"><strong>Selamat Datang ,</strong></span>
                       <small class="text-muted d-block mt-1">Dumy Special<i class="fe fe-chevron-down"></i></small>
-
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -139,30 +138,31 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="header collapse d-lg-flex sticky-top p-0" id="headerMenuCollapse">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg order-lg-first" id="navigasi">
-              <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
-                <li class="nav-item">
-                  <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
-                </li>
-                <li class="nav-item">
-                  <a href="#/pengajuan" class="nav-link"><i class="fe fe-file-text"></i> <strong>Pengajuan</strong> </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#/profil_keluarga" class="nav-link"><i class="fe fe-users"></i> <strong>Profile Keluarga</strong> </a>
-                </li>
-              </ul>
+        <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg order-lg-first" id="navigasi">
+                <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                  <li class="nav-item">
+                    <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#/pengajuan" class="nav-link"><i class="fe fe-file-text"></i> <strong>Pengajuan</strong> </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#/profil_keluarga" class="nav-link"><i class="fe fe-users"></i> <strong>Profile Keluarga</strong> </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <div id="content">
 
       </div>
-      <footer class="footer">
+      <footer class="footer fixed-bottom">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
