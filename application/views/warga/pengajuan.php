@@ -1,10 +1,10 @@
 <!-- Form Pengajuan -->
 <div class="my-3 my-md-5"></div>
 <div class="container">
-  <div class="col-lg-6">
+  <div class="col-md-12">
     <div class="card" id="form_pengajuan">
-      <div class="card-header">
-        <div class="card-title">
+      <div class="card-header" id="judul" style="padding-left: 35%; padding-top: 15px;">
+        <div class="card-title ">
           <h2>Form Pengajuan</h2>
         </div>
       </div>
@@ -34,8 +34,8 @@
       </div>
       <div class="card-footer">
         <div class="btn-list text-right">
-          <button type="submit" class="btn btn-lg btn-primary" id="btn_simpan">Simpan</button>
-          <button type="submit" class="btn btn-lg btn-danger" id="btn_batal">Batal</button>
+          <button type="submit" class="btn btn-pill btn-primary" id="btn_simpan">Simpan</button>
+          <button type="submit" class="btn btn-pill btn-danger" id="btn_batal">Batal</button>
         </div>
       </div>
     </div>
@@ -46,8 +46,8 @@
 
 <div class="container">
   <div class="page-header text-right">
-    <h1 class="page-title animated bounceIn">Daftar Pengajuan</h1>
-    <button type="submit" id="btn_tambah" class="btn btn-primary ml-auto animated bounceIn"> <i class="fe fe-plus"></i> Tambah Pengajuan </button>
+    <h1 class="page-title animated bounceIn" style="font-weight:600; font-size: 30px;">Daftar Pengajuan</h1>
+    <button type="button" id="btn_tambah" class="btn btn-primary ml-auto animated bounceIn"> <i class="fe fe-plus"></i> Tambah Pengajuan </button>
   </div>
   <div class="row">
     <div class="col-12">
