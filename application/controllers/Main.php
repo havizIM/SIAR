@@ -3,28 +3,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Main extends CI_Controller {
 
- function index(){
+ function index()
+ {
    $login = $this->session->userdata('login');
    $level = $this->session->userdata('level');
 
-   if ($login == 'User') {
-     $this->load->view('warga/main');
-   }else {
+   if ($login == true) {
      switch ($level) {
-
-        case 'Ketua RT':
+        case 'RT':
           $this->load->view('rt/main');
         break;
 
-        case 'Ketua RW':
+        case 'RW':
           $this->load->view('rw/main');
         break;
 
-        default:
-
+        case 'Warga':
+          $this->load->view('warga/main');
         break;
-     }
+
+        case 'Admin':
+          $this->load->view('admin/main');
+        break;
+
+        default:
+          redirect('/');
+        break;
+      }
+   } else {
+     redirect('/');
    }
+
 	}
 }
 ?>

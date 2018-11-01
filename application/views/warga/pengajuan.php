@@ -54,43 +54,19 @@
       <div class="card animated zoomIn">
         <div class="card-body ">
           <div class="table-responsive">
-            <table class="table card-table table-vcenter text-wrap">
+            <table class="table card-table table-vcenter text-wrap" id="t_pengajuan">
               <thead>
                 <tr>
                   <th class="w-1">No.</th>
-                  <th>No.Kartu Keluarga</th>
+                  <th>Tgl Pengajuan</th>
                   <th>NIK</th>
                   <th>Nama</th>
                   <th class="text-wrap">Keperluan</th>
-                  <th></th>
+                  <th>Dok. Pelengkap</th>
+                  <th>Status</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><span class="text-muted">001</span></td>
-                  <td>33010513079788818</td>
-                  <td>33010513079788818</td>
-                  <td>Dummy</td>
-                  <td>Membuat Surat SKTM</td>
-                  <td>
-                    <a class="icon" href="javascript:void(0)">
-                      <i class="fa fa-edit fa-lg text-green"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><span class="text-muted">002</span></td>
-                  <td>33019929017389</td>
-                  <td>33019929017389</td>
-                  <td>Dummy 2</td>
-                  <td class="text-wrap">Pengajuan membuat Surat Pengantar E-KTP</td>
-                  <td>
-                    <a class="icon" href="javascript:void(0)">
-                      <i class="fa fa-edit fa-lg text-green"></i>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
         </div>
@@ -104,6 +80,38 @@
 
 <script type="text/javascript">
 
+function loadPengajuan(){
+  $.ajax({
+    url: '<?= base_url().'api/show_pengajuan' ?>',
+    type: 'GET',
+    dataType: 'JSON',
+    success: function(data){
+      var html = '';
+
+      $.each(data.pengajuan, function(k,v){
+        html += `<tr>`;
+        html += `<td>${v.no_pengajuan}</td>`;
+        html += `<td>${v.tgl_pengajuan}</td>`;
+        html += `<td>${v.NIK}</td>`;
+        html += `<td>${v.nama_pengajuan}</td>`;
+        html += `<td>${v.keperluan}</td>`;
+        html += `<td>${v.jml_pelengkap}</td>`;
+        if(v.status_pengajuan == 'Proses') {
+          html += `<td><button class="btn btn-md btn-info">Lihat</button> <button class="btn btn-md btn-danger">Batal</button></td>`;
+        } else {
+          html += `</td>${v.status_pengajuan}</td>`;
+        }
+        html += `</tr>`;
+      });
+
+      $('#t_pengajuan tbody').html(html);
+    },
+    error: function(){
+      alert('Tidak dapat mengakses halaman');
+    }
+  })
+}
+
 $(document).ready(function(){
 
   $('#btn_batal').click(function(){
@@ -115,6 +123,9 @@ $(document).ready(function(){
   });
 
   $('#form_pengajuan').hide();
+
+  loadPengajuan();
+
 
 });
 

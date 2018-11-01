@@ -23,19 +23,13 @@
       return $new_kode;
     }
 
-    function select_info($where)
+    function select($table, $where = null)
     {
-      $this->db->select('*');
-      $this->db->from('t_peserta a');
-      $this->db->join('t_subyek b', 'b.id_subyek = a.id_subyek', 'left');
-
-      $this->db->where($where);
-      return $this->db->get();
-    }
-
-    function select($table, $where)
-    {
-      return $this->db->get_where($table, $where);
+      if($where == null){
+        return $this->db->get($table);
+      } else {
+        return $this->db->get_where($table, $where);
+      }
     }
 
     function add_data($table, $data)

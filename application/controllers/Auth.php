@@ -12,10 +12,6 @@ class Auth extends CI_Controller {
 		$this->load->view('login');
 	}
 
-  function admin()
-  {
-    $this->load->view('login_admin');
-  }
 
   function cekLogin() {
     $no_kk = $this->input->post('no_kk');
@@ -28,8 +24,15 @@ class Auth extends CI_Controller {
 
     $cek = $this->core->select('t_user', $where);
     if($cek->num_rows() == 1){
+      foreach($cek->result() as $key){
+          $no_kk = $key->no_kk;
+          $level = $key->level;
+      }
+
       $session = array(
-        'login' => 'User'
+        'no_kk' => $no_kk,
+        'level' => $level,
+        'login' => true
       );
 
       $this->session->set_userdata($session);
@@ -39,33 +42,6 @@ class Auth extends CI_Controller {
     }
   }
 
-  function cekLoginAdmin() {
-		$username = $this->input->post('username');
-    $password = sha1($this->input->post('password'));
-
-    $where = array(
-      'username' =>  $username,
-      'password' => $password
-    );
-
-
-		$cek = $this->core->select('t_admin', $where);
-		if($cek->num_rows() == 1){
-      foreach($cek->result() as $key){
-        $level = $key->level;
-      }
-
-			$session = array(
-        'login' => 'Admin',
-        'level' => $level
-      );
-
-			$this->session->set_userdata($session);
-			echo "berhasil";
-		} else {
-			echo "gagal";
-		}
-	}
 
   function logout()
   {
@@ -73,11 +49,6 @@ class Auth extends CI_Controller {
     redirect(base_url().'');
   }
 
-  function logout_admin()
-  {
-    $this->session->sess_destroy();
-    redirect(base_url().'auth/admin');
-  }
 
 }
 ?>
