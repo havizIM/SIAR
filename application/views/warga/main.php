@@ -89,6 +89,8 @@
    margin-top: 165px;
  }
 
+ 
+
 
   /*================================================
             		Parallax
@@ -162,6 +164,7 @@
       <div id="content">
 
       </div>
+
       <footer class="footer fixed-bottom">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">

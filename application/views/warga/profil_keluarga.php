@@ -74,7 +74,7 @@
 
 <!-- Profile Keluarga -->
   <div class="my-3 my-md-5"></div>
-  
+
   <div class="container">
     <div class="row" id="anggota"></div>
   </div>

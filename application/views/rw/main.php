@@ -26,6 +26,11 @@
 
     <style media="screen">
 
+      body{
+        background-image: url(<?= base_url().'image/blur.jpg' ?>);
+      	background-attachment: fixed;
+      }
+
       .page .header{
         background: #ffffff;
       }
