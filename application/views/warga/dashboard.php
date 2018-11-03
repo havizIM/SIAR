@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-10 text-right">
               <div class="h3" style="margin-bottom:0px;">Jumlah Anggota Keluarga</div>
-              <div class="h1 text-pink" style="font-size:75px; margin-bottom:0px;">3</div>
+              <div class="h1 text-pink" style="font-size:75px; margin-bottom:0px;">4</div>
             </div>
           </div>
         </div>

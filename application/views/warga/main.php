@@ -89,7 +89,7 @@
    margin-top: 165px;
  }
 
- 
+
 
 
   /*================================================
@@ -120,7 +120,7 @@
                     <span class="avatar" style="background-image: url(<?= base_url().'image/logo-small.png' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default"><strong>Selamat Datang ,</strong></span>
-                      <small class="text-muted d-block mt-1">Dumy Special<i class="fe fe-chevron-down"></i></small>
+                      <small class="text-muted d-block mt-1"><?= $this->session->userdata('no_kk') ?><i class="fe fe-chevron-down"></i></small>
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -290,7 +290,7 @@
         "debug": false,
         "newestOnTop": false,
         "progressBar": false,
-        "positionClass": "toast-top-right",
+        "positionClass": "toast-bottom-left",
         "preventDuplicates": true,
         "onclick": null,
         "showDuration": "300",
