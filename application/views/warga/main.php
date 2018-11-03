@@ -89,6 +89,11 @@
    margin-top: 165px;
  }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 82c0b66d80b6513f6e0aae2f6bb6b9ab2a41fa83
 
   /*================================================
             		Parallax
@@ -118,7 +123,7 @@
                     <span class="avatar" style="background-image: url(<?= base_url().'image/logo-small.png' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default"><strong>Selamat Datang ,</strong></span>
-                      <small class="text-muted d-block mt-1">Dumy Special<i class="fe fe-chevron-down"></i></small>
+                      <small class="text-muted d-block mt-1"><?= $this->session->userdata('no_kk') ?><i class="fe fe-chevron-down"></i></small>
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -288,7 +293,7 @@
         "debug": false,
         "newestOnTop": false,
         "progressBar": false,
-        "positionClass": "toast-top-right",
+        "positionClass": "toast-bottom-left",
         "preventDuplicates": true,
         "onclick": null,
         "showDuration": "300",

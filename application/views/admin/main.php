@@ -13,7 +13,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
-    <title>RW | SIAR</title>
+    <title>Admin | SIAR</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
@@ -25,11 +25,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url().'image/logo.png' ?>">
 
     <style media="screen">
-
-      body{
-        background-image: url(<?= base_url().'image/blur.jpg' ?>);
-      	background-attachment: fixed;
-      }
 
       .page .header{
         background: #ffffff;
@@ -105,7 +100,7 @@
                       <i class="dropdown-icon fe fe-lock"></i> Change Password
                     </a>
 
-                    <a class="dropdown-item" href="<?= base_url().'auth/logout' ?>">
+                    <a class="dropdown-item" href="<?= base_url().'auth/logout_admin' ?>">
                       <i class="dropdown-icon fe fe-power"></i> Logout
                     </a>
                   </div>
@@ -204,7 +199,7 @@
 
               function load_content(link)
               {
-                $.get(`<?= base_url().'rw/'?>${link}`,function(content)
+                $.get(`<?= base_url().'admin/'?>${link}`,function(content)
                 {
                   $('#content').html(content);
                 });
