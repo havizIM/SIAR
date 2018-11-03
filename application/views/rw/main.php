@@ -105,7 +105,7 @@
                       <i class="dropdown-icon fe fe-lock"></i> Change Password
                     </a>
 
-                    <a class="dropdown-item" href="<?= base_url().'auth/logout_admin' ?>">
+                    <a class="dropdown-item" href="<?= base_url().'auth/logout' ?>">
                       <i class="dropdown-icon fe fe-power"></i> Logout
                     </a>
                   </div>

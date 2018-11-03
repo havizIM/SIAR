@@ -34,7 +34,8 @@
     {
       header('Content-Type: application/json');
 
-      $data['pengajuan'] = $this->main->show_pengajuan()->result();
+      $where = array('no_kk' => $this->session->userdata('no_kk'));
+      $data['pengajuan'] = $this->main->show_pengajuan($where)->result();
 
       echo json_encode($data, JSON_PRETTY_PRINT);
     }
@@ -81,6 +82,42 @@
       } else {
         echo "gagal";
       }
+    }
+
+    function upload_dokumen()
+    {
+      $no_pengajuan = $this->input->post('no_pengajuan');
+      $keterangan = $this->input->post('keterangan');
+
+      $upload = $this->main->upload($no_pengajuan);
+
+      // echo $upload['result'];
+      if($upload['result'] == "success"){
+
+        $data = array(
+  				'no_pengajuan' => $no_pengajuan,
+          'keterangan' => $keterangan,
+          'foto_dokumen' => $upload['file']['file_name']
+  			);
+
+        $cek = $this->core->add_data('t_pelengkap', $data);
+        if($cek){
+          echo "berhasil";
+        } else {
+          echo "gagal";
+        }
+      }
+    }
+
+    function detail_pengajuan($no_pengajuan)
+    {
+      header('Content-Type: application/json');
+
+      $where = array('no_pengajuan' => $no_pengajuan);
+      $data['detail'] = $this->core->select('t_pengajuan', $where)->result();
+      $data['pelengkap'] = $this->core->select('t_pelengkap', $where)->result();
+
+      echo json_encode($data, JSON_PRETTY_PRINT);
     }
 
   }

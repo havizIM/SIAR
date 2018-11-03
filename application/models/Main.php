@@ -28,6 +28,31 @@
 
       return $this->db->get();
     }
+
+    function upload($no)
+		{
+			$nama_file = 'dok_'.$no;
+			$config['upload_path']   = './image/dokumen';
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['max_size']      = '3048';
+			$config['remove_space']  = TRUE;
+			$config['file_name'] = $nama_file;
+
+			$this->load->library('upload', $config);
+
+			if($this->upload->do_upload('foto_dokumen') ){
+			     $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
+			     return $return;
+			} else {
+      		$return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+		  		return $return;
+			}
+		}
+
+    function update_foto($data)
+    {
+			return $this->db->insert('t_pelengkap', $data);
+    }
   }
 
 ?>

@@ -141,6 +141,7 @@
         <form id="form_dok">
           <div class="form-group">
             <label class="form-label">Nama Dokumen</label>
+            <input type="hidden" name="no_pengajuan" id="no_pengajuan">
             <input type="text" class="form-control" id="keterangan" name="keterangan" />
           </div>
           <div class="form-group">
@@ -148,9 +149,87 @@
             <input type="file" class="form-control" id="foto_dokumen" name="foto_dokumen" />
           </div>
           <div class="form-grup">
-            <center><button type="submit" class="btn btn-primary" style="width: 90%">Upload</button></center>
+            <center><button type="submit" class="btn btn-primary" style="width: 90%" id="submit_upload">Upload</button></center>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal animated bounceInDown delay-2s" id="modal_detail">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Detail Pengajuan</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>Detail</h2>
+        <table class="table" id="t_detail">
+          <tr>
+            <th>No Pengajuan</th>
+            <td id="t_nopeng"></td>
+          </tr>
+          <tr>
+            <th>No KK</th>
+            <td id="t_nokk"></td>
+          </tr>
+          <tr>
+            <th>Tanggal Pengajuan</th>
+            <td id="t_tgl"></td>
+          </tr>
+          <tr>
+            <th>NIK</th>
+            <td id="t_nik"></td>
+          </tr>
+          <tr>
+            <th>Nama pengajuan</th>
+            <td id="t_nama"></td>
+          </tr>
+          <tr>
+            <th>Jenis Kelamin</th>
+            <td id="t_jkel"></td>
+          </tr>
+          <tr>
+            <th>Tanggal Lahir</th>
+            <td id="t_tglLahir"></td>
+          </tr>
+          <tr>
+            <th>Tempat Lahir</th>
+            <td id="t_tmpLahir"></td>
+          </tr>
+          <tr>
+            <th>Pekerjaan</th>
+            <td id="t_kerja"></td>
+          </tr>
+          <tr>
+            <th>Kewarganegaraan</th>
+            <td id="t_wn"></td>
+          </tr>
+          <tr>
+            <th>Pendidikan</th>
+            <td id="t_pend"></td>
+          </tr>
+          <tr>
+            <th>Agama</th>
+            <td id="t_agama"></td>
+          </tr>
+          <tr>
+            <th>Alamat</th>
+            <td id="t_alamat"></td>
+          </tr>
+          <tr>
+            <th>Keperluan</th>
+            <td id="t_kper"></td>
+          </tr>
+          <tr>
+            <th>Status Pengajuan</th>
+            <td id="t_stts"></td>
+          </tr>
+        </table>
+        <h3>Dokumen Pelengkap</h3>
+        <div class="" id="t_pelengkap"></div>
       </div>
     </div>
   </div>
@@ -175,7 +254,9 @@ function loadPengajuan(){
         html += `<td>${v.keperluan}</td>`;
         html += `<td>${v.jml_pelengkap}</td>`;
         if(v.status_pengajuan == 'Proses') {
-          html += `<td><button class="btn btn-md btn-success" id="btn_upload" data-id="${v.no_pengajuan}">Upload</button> <button class="btn btn-md btn-info">Lihat</button> <button class="btn btn-md btn-danger" id="btn_hapus" data-id="${v.no_pengajuan}">Batal</button></td>`;
+          html += `<td><button class="btn btn-md btn-success" id="btn_upload" data-id="${v.no_pengajuan}">Upload</button>`;
+          html += `<button class="btn btn-md btn-info" id="btn_lihat" data-id="${v.no_pengajuan}">Lihat</button>`;
+          html += `<button class="btn btn-md btn-danger" id="btn_hapus" data-id="${v.no_pengajuan}">Batal</button></td>`;
         } else {
           html += `</td>${v.status_pengajuan}</td>`;
         }
@@ -188,6 +269,49 @@ function loadPengajuan(){
       alert('Tidak dapat mengakses halaman');
     }
   })
+}
+
+function loadDetail(id)
+{
+  var link = '<?= base_url().'api/detail_pengajuan/' ?>'+id
+
+  $.ajax({
+    url: link,
+    type: 'GET',
+    dataType: 'JSON',
+    success: function(data){
+
+      var html ='';
+      $.each(data.detail, function(k, v){
+        $('#t_nopeng').text(v.no_pengajuan);
+        $('#t_nokk').text(v.no_kk);
+        $('#t_tgl').text(v.tgl_pengajuan);
+        $('#t_nik').text(v.NIK);
+        $('#t_nama').text(v.nama_pengajuan);
+        $('#t_jkel').text(v.jenis_kelamin);
+        $('#t_tglLahir').text(v.tgl_lahir);
+        $('#t_tmpLahir').text(v.tempat_lahir);
+        $('#t_kerja').text(v.pekerjaan);
+        $('#t_wn').text(v.kewarganegaraan);
+        $('#t_pend').text(v.pendidikan);
+        $('#t_agama').text(v.agama);
+        $('#t_alamat').text(v.alamat);
+        $('#t_kper').text(v.keperluan);
+        $('#t_stts').text(v.status_pengajuan);
+      });
+
+      $.each(data.pelengkap, function(k, v){
+        html+= `<p>${v.keterangan}</p>`;
+        html+= `<img src="<?= base_url().'image/dokumen/'  ?>${v.foto_dokumen}"/>`;
+      });
+      $('#t_pelengkap').html(html);
+    },
+    error: function(){
+      alert('Tidak dapat mengakses halaman');
+    }
+  });
+
+  // alert(link);
 }
 
 $(document).ready(function(){
@@ -272,7 +396,20 @@ $(document).ready(function(){
   $(document).on('click', '#btn_upload', function(){
     $('#form_dok')[0].reset();
     $('#modal_dok').modal('show');
+    $('#no_pengajuan').val($(this).data('id'));
   });
+
+  $('#foto_dokumen').change(function(){
+    var file = $(this)[0].files[0];
+    var type = file.type;
+    var name = file.name;
+    var match_type = ["image/png", "image/jpeg"];
+    if (!((type == match_type[0]) || (type == match_type[1]))) {
+        toastr.warning('Format yang diperbolehkan hanya .png atau .jpg', 'Warning');
+        $('#foto_dokumen').val('');
+    }
+  });
+
 
   $('#form_dok').on('submit', function(e) {
     e.preventDefault();
@@ -286,12 +423,47 @@ $(document).ready(function(){
     });
 
     if(submit == true){
-      toastr.info('Berhasil Upload dokumen pelengkap', 'Success');
-      $('#modal_dok').modal('hide');
+      $.ajax({
+          url: '<?= base_url().'api/upload_dokumen' ?>',
+          type: 'POST',
+          data: new FormData(this),
+          cache: false,
+          processData: false,
+          contentType: false,
+          beforeSend: function() {
+            $('#submit_upload').addClass('btn-loading');
+          },
+          success: function(data) {
+              if (data == "berhasil") {
+                toastr.info('Berhasil Upload dokumen pelengkap', 'Success');
+                $('#modal_dok').modal('hide');
+                $('#foto_dokumen').val('');
+                $('#submit_upload').removeClass('btn-loading');
+                loadPengajuan();
+              } else {
+                  toastr.error(`File tidak berhasil diupload`, 'Error');
+              }
+              $('#modalUpload').modal('hide');
+          },
+          error: function() {
+              toastr.error('Tidak dapat memproses Data', 'Error');
+          }
+      });
+
     } else {
-      toastr.error('Gagal mengakses halaman', 'Error');
+      toastr.error('Silahkan masukkan dokumen pelengkap', 'Error');
     }
   });
+
+  $(document).on('click', '#btn_lihat' ,function(){
+    var id = $(this).data('id');
+    loadDetail(id);
+    $('#modal_detail').modal('show');
+
+
+  })
+
+
 
 });
 
