@@ -43,6 +43,15 @@
   .container ul li{
     color: #fff;
   }
+
+  #card-ul ul li{
+    color:#495057;
+  }
+
+  #card-ul .card{
+    border:2px solid #4780cf;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.66);
+  }
   .footer a:not(.btn) {
     color: #ffffff;
   }
@@ -210,6 +219,8 @@
     <script src="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/plugins/toastr/toastr.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/js/wow/wow.min.js' ?>"type="text/javascript"></script>
+    <script src="<?= base_url().'assets/js/jquery.flip.min.js' ?>"type="text/javascript"></script>
+
 
 
     </script>
@@ -247,6 +258,12 @@
           load_content(href);
         });
 
+//Flipped
+$(function(){
+    $(".flip").flip({
+        trigger: 'hover'
+    });
+});
 
 // modal bootstrap
         $("#btn_pass").on('click',function(){
