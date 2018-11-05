@@ -168,7 +168,7 @@
 
       </div>
 
-      <footer class="footer fixed-bottom">
+      <footer class="footer ">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
@@ -241,7 +241,6 @@
           });
         }
 
-
 //Load halaman with URL
         if(location.hash)
         {
@@ -258,12 +257,6 @@
           load_content(href);
         });
 
-//Flipped
-$(function(){
-    $(".flip").flip({
-        trigger: 'hover'
-    });
-});
 
 // modal bootstrap
         $("#btn_pass").on('click',function(){
