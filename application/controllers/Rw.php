@@ -3,20 +3,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Rw extends CI_Controller {
 
- function dashboard(){
-		$this->load->view('rw/dashboard');
-	}
+  function dashboard(){
+ 		$this->load->view('rw/dashboard');
+ 	}
 
-  function pengajuan(){
-    $this->load->view('rw/pengajuan');
-  }
+   function ktp(){
+     $this->load->view('rw/ktp');
+   }
 
-  function warga(){
-    $this->load->view('rw/warga');
-  }
+   function domisili(){
+     $this->load->view('rw/domisili');
+   }
 
-  function laporan(){
-    $this->load->view('rw/laporan');
-  }
+   function kehilangan(){
+     $this->load->view('rw/kehilangan');
+   }
+
+   function kematian(){
+     $this->load->view('rw/kematian');
+   }
+
+   function pindah(){
+     $this->load->view('rw/pindah');
+   }
+
+   function keluarga(){
+     $this->load->view('rw/keluarga');
+   }
+
+   function anggota($id){
+     $data['keluarga'] =
+     $this->load->view('rt/anggota', $data);
+   }
 }
 ?>

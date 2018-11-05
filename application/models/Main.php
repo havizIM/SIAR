@@ -4,6 +4,33 @@
 
   class Main extends CI_Model
   {
+
+    function select_user($where = null)
+    {
+      $this->db->select('a.*, b.rtrw');
+
+      $this->db->from('t_user a');
+      $this->db->join('t_keluarga b', 'b.no_kk = a.no_kk', 'left');
+
+      if($where != null){
+        $this->db->where($where);
+      }
+      return $this->db->get();
+    }
+
+    function select_keluarga($where = null)
+    {
+      $this->db->select('*');
+      $this->db->select('(SELECT COUNT(NIK) FROM t_anggota WHERE t_anggota.no_kk = t_keluarga.no_kk) as jml_anggota');
+      $this->db->from('t_keluarga');
+
+      if($where != null){
+        $this->db->where($where);
+      }
+
+      return $this->db->get();
+    }
+
     function show_keluarga($where)
     {
       $this->db->select('a.nama, b.*');
@@ -52,6 +79,32 @@
     function update_foto($data)
     {
 			return $this->db->insert('t_pelengkap', $data);
+    }
+
+    function select_pengajuan($where = null)
+    {
+      $this->db->select('a.*, b.rtrw');
+
+      $this->db->from('t_pengajuan a');
+      $this->db->join('t_keluarga b', 'b.no_kk = a.no_kk', 'left');
+
+      if($where != null){
+        $this->db->where($where);
+      }
+      return $this->db->get();
+    }
+
+    function select_summary($where = null)
+    {
+      $this->db->select('COUNT(no_kk) as jml_keluarga');
+      $this->db->select('(SELECT COUNT(no_pengajuan) FROM t_pengajuan WHERE status_pengajuan = "Proses") as jml_pengajuan');
+
+      $this->db->from('t_keluarga');
+
+      if($where != null){
+        $this->db->where($where);
+      }
+      return $this->db->get();
     }
   }
 

@@ -89,7 +89,6 @@
    margin-top: 165px;
  }
 
-
   .bg-parallax {
   	background-repeat: no-repeat;
   	background-size: cover;

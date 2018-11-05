@@ -15,6 +15,7 @@
 
     <title>RT | SIAR</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
     <link rel="stylesheet" href="<?= base_url().'assets/fonts/fontawesome/css/fontawesome.min.css' ?>">
     <link rel="stylesheet" href="<?= base_url().'assets/css/dashboard.css' ?>">
@@ -76,12 +77,12 @@
                     <span class="avatar" style="background-image: url(<?= base_url().'image/logo-small.png' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default"><strong>Selamat Datang ,</strong></span>
-                      <small class="text-muted d-block mt-1">Special Dummy</small>
+                      <small class="text-muted d-block mt-1">Ketua RT <?= $this->session->userdata('rtrw') ?></small>
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                     <a class="dropdown-item" id="btn_pass">
-                      <i class="dropdown-icon fe fe-lock" ></i> Change Password
+                      <i class="dropdown-icon fe fe-lock" ></i> Ubah Password
                     </a>
 
                     <a class="dropdown-item" href="<?= base_url().'auth/logout' ?>">
@@ -105,10 +106,17 @@
                     <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman1" class="nav-link"><i class="fe fe-file-text"></i><strong>Pengajuan</strong></a>
+                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-file-text"></i><strong>Surat-surat</strong></a>
+                    <div class="dropdown-menu dropdown-menu-arrow">
+                      <a href="#/ktp" class="dropdown-item ">Buat KTP</a>
+                      <a href="#/domisili" class="dropdown-item ">Domisili</a>
+                      <a href="#/kehilangan" class="dropdown-item ">Surat Kehilangan</a>
+                      <a href="#/kematian" class="dropdown-item ">Surat Kematian</a>
+                      <a href="#/pindah" class="dropdown-item">Surat Pindah</a>
+                    </div>
                   </li>
                   <li class="nav-item">
-                    <a href="#/halaman2" class="nav-link"><i class="fe fe-users"></i><strong>Warga</strong></a>
+                    <a href="#/keluarga" class="nav-link"><i class="fe fe-users"></i><strong>Keluarga</strong></a>
                   </li>
                 </ul>
               </div>
@@ -121,7 +129,7 @@
       <div id="content">
 
       </div>
-      <footer class="footer fixed-bottom">
+      <footer class="footer">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
 
@@ -203,6 +211,7 @@
       $('#btn_pass').on('click',function(){
         $('#modal_pass').modal('show');
       });
+
 //Function validasi ganti password
       $('#form_pass').on('submit',function(e){
         e.preventDefault();
@@ -228,12 +237,13 @@
           toastr.error('Masukkan Password')
         }
       });
+
       toastr.options = {
       "closeButton": false,
       "debug": false,
       "newestOnTop": false,
       "progressBar": false,
-      "positionClass": "toast-top-center",
+      "positionClass": "toast-bottom-left",
       "preventDuplicates": true,
       "onclick": null,
       "showDuration": "300",

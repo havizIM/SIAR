@@ -126,13 +126,17 @@
                     <a href="#/dashboard" class="nav-link"><i class="fe fe-home"></i><strong>Dashboard</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#/pengajuan" class="nav-link"><i class="fe fe-file-text"></i><strong>Pengajuan</strong></a>
+                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-file-text"></i><strong>Surat-surat</strong></a>
+                    <div class="dropdown-menu dropdown-menu-arrow">
+                      <a href="#/ktp" class="dropdown-item ">Buat KTP</a>
+                      <a href="#/domisili" class="dropdown-item ">Domisili</a>
+                      <a href="#/kehilangan" class="dropdown-item ">Surat Kehilangan</a>
+                      <a href="#/kematian" class="dropdown-item ">Surat Kematian</a>
+                      <a href="#/pindah" class="dropdown-item">Surat Pindah</a>
+                    </div>
                   </li>
                   <li class="nav-item">
-                    <a href="#/warga" class="nav-link"><i class="fe fe-users"></i><strong>Warga</strong></a>
-                  </li>
-                  <li class="nav-item">
-                  <a href="#/laporan" class="nav-link"> <i class="fe fe-clipboard"></i><strong>Laporan</strong> </a>
+                    <a href="#/keluarga" class="nav-link"><i class="fe fe-users"></i><strong>Keluarga</strong></a>
                   </li>
                 </ul>
               </div>

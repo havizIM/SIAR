@@ -5,6 +5,7 @@ class Auth extends CI_Controller {
  function __construct() {
    parent::__construct();
    $this->load->model('core');
+   $this->load->model('main');
  }
 
  function index()
@@ -22,19 +23,21 @@ class Auth extends CI_Controller {
     $password = sha1($this->input->post('password'));
 
     $where = array(
-      'no_kk' =>  $no_kk,
-      'password' => $password
+      'a.no_kk' =>  $no_kk,
+      'a.password' => $password
     );
 
-    $cek = $this->core->select('t_user', $where);
+    $cek = $this->main->select_user($where);
     if($cek->num_rows() == 1){
       foreach($cek->result() as $key){
           $no_kk = $key->no_kk;
           $level = $key->level;
+          $rtrw = $key->rtrw;
       }
 
       $session = array(
         'no_kk' => $no_kk,
+        'rtrw' => $rtrw,
         'level' => $level,
         'login' => true
       );

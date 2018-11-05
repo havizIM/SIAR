@@ -158,14 +158,14 @@
 </div>
 
 <div class="modal animated bounceInDown delay-2s" id="modal_detail">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title">Detail Pengajuan</h1>
+        <h1 class="modal-title">Detail</h1>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h2>Detail</h2>
+        <h2>Pengajuan</h2>
         <table class="table" id="t_detail">
           <tr>
             <th>No Pengajuan</th>
