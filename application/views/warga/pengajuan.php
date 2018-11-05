@@ -2,9 +2,9 @@
 <div class="my-3 my-md-5"></div>
 <div class="container">
   <div class="col-md-12">
-    <div class="card" id="form_pengajuan">
-      <div class="card-header" id="judul" style="padding-left: 35%; padding-top: 15px;">
-        <div class="card-title ">
+    <div class="card" id="form_pengajuan" style="border:2px solid #e41e7f; box-shadow: 0 3px 14px rgba(0, 0, 0, 0.66);">
+      <div class="card-header" id="judul" style="padding-left: 35%; padding-top: 15px;background-color:#e41e7f; color: white;">
+        <div class="card-title " style="background-color:#e41e7f; color: white;">
           <h2>Formulir Pengajuan</h2>
         </div>
       </div>
@@ -103,7 +103,7 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <div class="card animated zoomIn">
+      <div class="card animated zoomIn"style="border:2px solid #e41e7f; box-shadow: 0 3px 14px rgba(0, 0, 0, 0.66);">
         <div class="card-body">
           <div class="table-responsive">
             <table class="table card-table table-vcenter text-wrap" id="t_pengajuan">

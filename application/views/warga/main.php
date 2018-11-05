@@ -43,6 +43,15 @@
   .container ul li{
     color: #fff;
   }
+
+  #card-ul ul li{
+    color:#495057;
+  }
+
+  #card-ul .card{
+    border:2px solid #4780cf;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.66);
+  }
   .footer a:not(.btn) {
     color: #ffffff;
   }
@@ -158,7 +167,7 @@
 
       </div>
 
-      <footer class="footer fixed-bottom">
+      <footer class="footer ">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
@@ -209,6 +218,8 @@
     <script src="<?= base_url().'assets/plugins/jquery-ui/jquery-ui.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/plugins/toastr/toastr.min.js' ?>" type="text/javascript"></script>
     <script src="<?= base_url().'assets/js/wow/wow.min.js' ?>"type="text/javascript"></script>
+    <script src="<?= base_url().'assets/js/jquery.flip.min.js' ?>"type="text/javascript"></script>
+
 
 
     </script>
@@ -228,7 +239,6 @@
             $('#content').html(content);
           });
         }
-
 
 //Load halaman with URL
         if(location.hash)
