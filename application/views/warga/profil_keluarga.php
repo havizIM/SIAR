@@ -73,42 +73,16 @@
 </div>
 
 
-<!-- Coba -->
-<div class="container">
-  <div class="flip">
-    <div class="card front">
-      <div class="card-header">
-        <h3 class="card-title">Card 1</h3>
-      </div>
-      <div class="card-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem. A consequuntur, deserunt eaque error nulla temporibus!
-      </div>
-    </div>
-    <div class="card back">
-      <div class="card-header">
-        <h3 class="card-title">Card 2</h3>
-      </div>
-      <div class="card-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem. A consequuntur, deserunt eaque error nulla temporibus!
-      </div>
-    </div>
-  </div>
-</div>
 <!-- Profile Keluarga -->
   <div class="my-3 my-md-5"></div>
 
   <div class="container">
-      <div class="row" id="anggota" >
-
-      </div>
+      <div class="row" id="anggota" ></div>
   </div>
 
   <div class="my-3 my-md-5"></div>
 
   <script type="text/javascript">
-
-
-
 
     function loadProfile()
     {
@@ -163,10 +137,6 @@
                 anggota += `</div>`;
               anggota += `</div>`;
             anggota += `</div>`;
-
-            anggota += `<div class="front">`;
-              anggota += `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`;
-            anggota += `</div>`;
           });
 
           $('#anggota').html(anggota);
@@ -177,14 +147,9 @@
       })
     }
 
-    loadProfile();
-
-    // Flip
-    $(function(){
-      $(".flip").flip({
-      trigger: 'hover',
-
+    $(document).ready(function(){
+      loadProfile();
     });
-    });
+
 
   </script>

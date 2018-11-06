@@ -41,7 +41,7 @@
       <div class="card">
         <div class="card-header text-white bg-primary">
           <div class="card-title">
-            <h3>Syarat membuat KTP</h3>
+            <h3>Syarat Pembuatan KTP</h3>
           </div>
         </div>
         <div class="card-body">
@@ -61,7 +61,7 @@
       <div class="card">
         <div class="card-header text-white bg-primary">
           <div class="card-title">
-            <h3>Syarat membuat surat domisili</h3>
+            <h3>Syarat Surat Domisili</h3>
           </div>
         </div>
         <div class="card-body">
@@ -87,7 +87,7 @@
       <div class="card">
         <div class="card-header text-white bg-primary">
           <div class="card-title">
-            <h3>Syarat membuat surat kehilangan</h3>
+            <h3>Syarat Surat Kehilangan</h3>
           </div>
         </div>
         <div class="card-body">
@@ -105,7 +105,7 @@
       <div class="card">
         <div class="card-header text-white bg-primary">
           <div class="card-title">
-            <h3>Syarat membuat surat kematian</h3>
+            <h3>Syarat Surat Kematian</h3>
           </div>
         </div>
         <div class="card-body">
@@ -127,7 +127,7 @@
       <div class="card">
         <div class="card-header text-white bg-primary">
           <div class="card-tittle">
-            <h3>Syarat membuat surat pindah</h3>
+            <h3>Syarat Surat Pindah</h3>
           </div>
         </div>
         <div class="card-body">

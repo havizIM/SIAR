@@ -175,7 +175,7 @@
               </div>
               <div class="form-group">
                 <label for="" class="form-label">No Passpor</label>
-                <input type="number" class="form-control" name="no_password" id="no_password" value="">
+                <input type="number" class="form-control" name="no_paspor" id="no_paspor" value="">
               </div>
               <div class="form-group">
                 <label for="" class="form-label">No Kitap</label>

@@ -1,22 +1,21 @@
-<div class="my-3 my-md-5"></div>
 <div class="container">
   <div class="row">
     <div class="col-12">
       <div class="card">
         <div class="card-header bg-primary">
           <h1 class="card-title" style="font-size:25px; color:#ffffff;">Daftar Keluarga </h1>
-          <div class="col-lg-4 ml-auto">
+          <!-- <div class="col-lg-4 ml-auto">
             <form class="input-icon my-3 my-lg-0">
               <input type="search" class="form-control header-search" placeholder="Masukkan No KK.." tabindex="1">
               <div class="input-icon-addon">
                 <i class="fe fe-search"></i>
               </div>
             </form>
-          </div>
+          </div> -->
         </div>
         <div class="card-body ">
           <div class="table-responsive">
-            <table class="table card-table table-vcenter text-wrap" id="t_keluarga">
+            <table class="table card-table table-vcenter text-wrap" id="t_keluarga" style="font-size: 12px">
               <thead>
                 <tr>
                   <th class="w-1">#</th>
@@ -40,38 +39,38 @@
   </div>
 </div>
 
-<div class="modal animated bounceInDown delay-2s" id="modal_keluarga">
+<div class="modal animated bounceInDown delay-2s" id="modal_user">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title">Tambah Data Keluarga</h1>
+        <h1 class="modal-title"><center>Aktivasi User</center></h1>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="form_keluarga">
+        <form id="form_user">
           <div class="form-group">
-            <label class="form-label">No. KK</label>
-            <input type="text" class="form-control" id="no_kk" name="no_kk" minlength="16" maxlength="16"/>
+            <label class="form-label">Email</label>
+            <input type="hidden" name="no_kk" id="no_kk2">
+            <input type="email" class="form-control" id="email" name="email" />
           </div>
           <div class="form-group">
-            <label class="form-label">Tanggal KK</label>
-            <input type="date" class="form-control" id="tgl_kk" name="tgl_kk" />
+            <label class="form-label">Level</label>
+            <select class="form-control" name="level" id="level">
+              <option value="">--Pilih Level--</option>
+              <option value="Warga">Warga</option>
+              <option value="RT">RT</option>
+            </select>
           </div>
-          <div class="form-group">
-            <label class="form-label">Alamat</label>
-            <textarea name="alamat" id="alamat" rows="8" cols="80" class="form-control"></textarea>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" id="submit">Simpan</button>
-            <button type="button" class="btn btn-danger" id="batal">Batal</button>
+          <div class="form-grup">
+            <center><button type="submit" class="btn btn-primary">Simpan</button></center>
           </div>
         </form>
       </div>
     </div>
   </div>
-</div>
+  </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 
 <script type="text/javascript">
   function load_data(cari){
@@ -96,7 +95,12 @@
               html += `<td>${v.kecamatan}</td>`;
               html += `<td>${v.kelurahan}</td>`;
               html += `<td>${v.jml_anggota}</td>`;
-              html += `<td><a class="btn btn-info btn-md" href="#/anggota/${v.no_kk}">Detail</a></td>`;
+              html += `<td>`;
+              html += `<a class="btn btn-info btn-md" href="#/anggota/${v.no_kk}"><i class="fa fa-search"></i> Detail</a>`;
+              if(v.jml_user == 0){
+                html += ` <button class="btn btn-success btn-md" id="btn_user" data-id="${v.no_kk}"><i class="fa fa-plus"></i> User</button>`;
+              }
+              html += `</td>`;
             html += `</tr>`;
           });
         } else {
@@ -116,7 +120,33 @@
   $(document).ready(function(){
     load_data();
 
-
+    $(document).on('click', '#btn_user', function(){
+      $('#modal_user').modal('show');
+      $('#no_kk2').val($(this).data('id'));
+      $('#form_user')[0].reset();
     });
+
+    $('#form_user').on('submit', function(e){
+      e.preventDefault();
+
+      $.ajax({
+        url: '<?= base_url().'api/add_user' ?>',
+        type: 'POST',
+        data: $(this).serialize(),
+        success: function(data){
+          if(data == 'berhasil'){
+            toastr.info('Berhasil aktivasi User', 'Success');
+          } else {
+            toastr.error('Gagal aktivasi User', 'Error');
+          }
+          load_data();
+          $('#modal_user').modal('hide');
+        },
+        error: function(){
+          toastr.error('Gagal aktivasi User', 'Error');
+        }
+      });
+    })
+
   });
 </script>

@@ -32,8 +32,8 @@ class Rw extends CI_Controller {
    }
 
    function anggota($id){
-     $data['keluarga'] =
-     $this->load->view('rt/anggota', $data);
+     $data['no_kk'] = $id;
+     $this->load->view('rw/anggota', $data);
    }
 }
 ?>

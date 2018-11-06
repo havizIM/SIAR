@@ -97,7 +97,7 @@
                     <span class="avatar" style="background-image: url(<?= base_url().'image/logo-small.png' ?>)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default"><strong>Selamat Datang ,</strong></span>
-                      <small class="text-muted d-block mt-1">Special Dummy</small>
+                      <small class="text-muted d-block mt-1">Ketua RW 015</small>
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -149,7 +149,7 @@
       <div id="content">
 
       </div>
-      <footer class="footer fixed-bottom">
+      <footer class="footer">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
@@ -265,7 +265,7 @@
               "debug": false,
               "newestOnTop": false,
               "progressBar": false,
-              "positionClass": "toast-top-center",
+              "positionClass": "toast-bottom-left",
               "preventDuplicates": true,
               "onclick": null,
               "showDuration": "300",

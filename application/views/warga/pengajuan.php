@@ -12,10 +12,15 @@
         <div class="card-body">
           <div class="row">
             <div class="col-lg-6">
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label class="form-label">NIK</label>
-                <input type="text" name="nik" id="nik" class="form-control">
-              </div>
+                <div class="input-group">
+                  <input type="text" class="form-control" name="nik" id="nik">
+                  <span class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="lookup_anggota"><i class="fa fa-search"></i></button>
+                  </span>
+                </div>
+              </div> -->
               <div class="form-group">
                 <label class="form-label">Nama Lengkap</label>
                 <input type="text" name="nama_pengajuan" id="nama_pengajuan" class="form-control">
@@ -90,6 +95,35 @@
           </div>
         </div>
       </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal animated bounceInDown delay-2s" id="modal_lookup">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Lookup Anggota</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table" id="t_lookup">
+            <thead>
+              <tr>
+                <th>NIK</th>
+                <th>Nama</th>
+                <th>Jenis Kelamin</th>
+                <th>TTL</th>
+                <th>Agama</th>
+                <th>Pendidikan</th>
+                <th>Status Keluarga</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -258,7 +292,7 @@ function loadPengajuan(){
           html += `<button class="btn btn-md btn-info" id="btn_lihat" data-id="${v.no_pengajuan}">Lihat</button>`;
           html += `<button class="btn btn-md btn-danger" id="btn_hapus" data-id="${v.no_pengajuan}">Batal</button></td>`;
         } else {
-          html += `</td>${v.status_pengajuan}</td>`;
+          html += `<td>${v.status_pengajuan}</td>`;
         }
         html += `</tr>`;
       });
@@ -459,9 +493,53 @@ $(document).ready(function(){
     var id = $(this).data('id');
     loadDetail(id);
     $('#modal_detail').modal('show');
+  });
 
+  $('#lookup_anggota').on('click', function(){
+    $.ajax({
+      url: '<?= base_url().'api/lookup_anggota/'.$this->session->userdata('no_kk') ?>',
+      type: 'GET',
+      dataType: 'JSON',
+      success: function(data){
+          var anggota = '';
 
-  })
+          if(data.anggota.length != 0){
+            $.each(data.anggota, function(k,v){
+              var alamat = `${v.alamat} RT/RW. ${v.rtrw} Kel. ${v.kelurahan} Kec. ${v.kecamatan}, ${v.kotamadya}, ${v.provinsi}`
+              anggota += `<tr>`;
+              anggota += `<td><button class="btn btn-md btn-info" id="pilih" data-nik="${v.NIK}" data-nama="${v.nama}" data-jenis_kelamin="${v.jenis_kelamin}" data-tempat_lahir="${v.tempat_lahir}" data-tgl_lahir="${v.tgl_lahir}" data-pekerjaan="${v.pekerjaan}" data-kewarganegaraan="${v.kewarganegaraan}" data-pendidikan="${v.pendidikan}" data-agama="${v.agama}" data-alamat="${alamat}">Pilih</button></td>`;
+              anggota += `<td>${v.NIK}</td>`;
+              anggota += `<td>${v.nama}</td>`;
+              anggota += `<td>${v.jenis_kelamin}</td>`;
+              anggota += `<td>${v.tempat_lahir}, ${v.tgl_lahir}</td>`;
+              anggota += `<td>${v.agama}</td>`;
+              anggota += `<td>${v.pendidikan}</td>`;
+              anggota += `<td>${v.status_keluarga}</td>`;
+              anggota += `</tr>`;
+            });
+          } else {
+
+          }
+
+          $('#t_lookup tbody').html(anggota);
+      }
+    });
+    $('#modal_lookup').modal('show');
+  });
+
+  $(document).on('click', '#pilih', function(){
+    $('#nik').val($(this).data('nik'));
+    $('#nama_pengajuan').val($(this).data('nama'));
+    $('#jenis_kelamin').val($(this).data('jenis_kelamin'));
+    $('#tempat_lahir').val($(this).data('tempat_lahir'));
+    $('#tgl_lahir').val($(this).data('tgl_lahir'));
+    $('#pekerjaan').val($(this).data('pekerjaan'));
+    $('#kewarganegaraan').val($(this).data('kewarganegaraan'));
+    $('#pendidikan').val($(this).data('pendidikan'));
+    $('#agama').val($(this).data('agama'));
+    $('#alamat').val($(this).data('alamat'))
+    $('#modal_lookup').modal('hide');
+  });
 
 
 

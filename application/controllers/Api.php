@@ -124,18 +124,29 @@
     {
       header('Content-Type: application/json');
 
-      $where = array(
-        'a.status_pengajuan' => 'Proses',
-        'b.rtrw' => $this->session->userdata('rtrw')
-      );
+      $level = $this->session->userdata('level');
 
-      $where1 = array(
-        'rtrw' => $this->session->userdata('rtrw')
-      );
+      if($level == 'RT'){
+        $where = array(
+          'a.status_pengajuan' => 'Proses',
+          'b.rtrw' => $this->session->userdata('rtrw')
+        );
 
+        $where1 = array(
+          'rtrw' => $this->session->userdata('rtrw')
+        );
+        $status = 'Proses';
+      } elseif($level == 'RW'){
+        $where = array(
+          'a.status_pengajuan' => 'Menunggu',
+        );
+
+        $where1 = null;
+        $status = 'Menunggu';
+      }
 
       $data['pengajuan'] = $this->main->select_pengajuan($where)->result();
-      $data['summary'] = $this->main->select_summary($where1)->result();
+      $data['summary'] = $this->main->select_summary($where1, $status)->result();
 
       echo json_encode($data, JSON_PRETTY_PRINT);
     }
@@ -158,7 +169,13 @@
     {
       header('Content-Type: application/json');
 
-      $where = array('rtrw' => $this->session->userdata('rtrw'));
+      $level = $this->session->userdata('level');
+
+      if($level == 'RT'){
+        $where = array('rtrw' => $this->session->userdata('rtrw'));
+      } elseif($level == 'RW'){
+        $where = null;
+      }
 
       $data['keluarga'] = $this->main->select_keluarga($where)->result();
 
@@ -179,7 +196,7 @@
         );
       } elseif($level == 'RW'){
         $where = array(
-          'a.status_pengajuan' => 'Menunggu',
+          'a.status_pengajuan' => 'Selesai',
           'a.keperluan' => 'Pembuatan KTP'
         );
       }
@@ -203,7 +220,7 @@
         );
       } elseif($level == 'RW'){
         $where = array(
-          'a.status_pengajuan' => 'Menunggu',
+          'a.status_pengajuan' => 'Selesai',
           'a.keperluan' => 'Surat Domisili'
         );
       }
@@ -228,7 +245,7 @@
         );
       } elseif($level == 'RW'){
         $where = array(
-          'a.status_pengajuan' => 'Menunggu',
+          'a.status_pengajuan' => 'Selesai',
           'a.keperluan' => 'Surat Kehilangan'
         );
       }
@@ -252,7 +269,7 @@
         );
       } elseif($level == 'RW'){
         $where = array(
-          'a.status_pengajuan' => 'Menunggu',
+          'a.status_pengajuan' => 'Selesai',
           'a.keperluan' => 'Surat Kematian'
         );
       }
@@ -276,7 +293,7 @@
         );
       } elseif($level == 'RW'){
         $where = array(
-          'a.status_pengajuan' => 'Menunggu',
+          'a.status_pengajuan' => 'Selesai',
           'a.keperluan' => 'Surat Kematian'
         );
       }
@@ -341,7 +358,7 @@
         'status_perkawinan' => $this->input->post('status_perkawinan'),
         'status_keluarga' => $this->input->post('status_keluarga'),
         'kewarganegaraan' => $this->input->post('kewarganegaraan'),
-        'no_password' => $this->input->post('no_password'),
+        'no_paspor' => $this->input->post('no_paspor'),
         'no_kitap' => $this->input->post('no_kitap'),
         'nama_ayah' => $this->input->post('nama_ayah'),
         'nama_ibu' => $this->input->post('nama_ibu'),
@@ -423,6 +440,71 @@
       );
 
       $cek = $this->core->edit_data('t_keluarga', $data, $where);
+      if($cek){
+        echo "berhasil";
+      } else {
+        echo "gagal";
+      }
+    }
+
+    function add_dokumen()
+    {
+      $id = 'SP-010-015-'.date('dmY').'-';
+      $no_dokumen = $this->core->buatKode('t_dokumen', $id, 'no_dokumen', 4);
+      $keterangan = $this->input->post('keterangan');
+      $no_pengajuan = $this->input->post('no_pengajuan');
+      $diambil_oleh = $this->input->post('diambil_oleh');
+
+      $data = array(
+        'no_dokumen' => $no_dokumen,
+        'keterangan' => $keterangan,
+        'no_pengajuan' => $no_pengajuan,
+        'diambil_oleh' => $diambil_oleh,
+        'tgl_pengambilan' => date('Y-m-d')
+      );
+
+      $data1 = array(
+        'status_pengajuan' => 'Selesai'
+      );
+
+      $where = array(
+        'no_pengajuan' => $this->input->post('no_pengajuan')
+      );
+
+      $cek = $this->core->add_data('t_dokumen', $data);
+      if($cek){
+        $cek1 = $this->core->edit_data('t_pengajuan', $data1, $where);
+        if($cek1){
+          echo "berhasil";
+        } else {
+          echo "gagal";
+        }
+      } else {
+        echo "gagal";
+      }
+    }
+
+    function lookup_anggota($id)
+    {
+      header('Content-Type: application/json');
+
+      $where = array('a.no_kk' => $id);
+      $data['anggota'] = $this->main->lookup_anggota($where)->result();
+
+      echo json_encode($data, JSON_PRETTY_PRINT);
+
+    }
+
+    function add_user()
+    {
+      $data = array(
+        'no_kk' => $this->input->post('no_kk'),
+        'email' => $this->input->post('email'),
+        'password' => $this->input->post('level'),
+        'level' => $this->input->post('level')
+      );
+
+      $cek = $this->core->add_data('t_user', $data);
       if($cek){
         echo "berhasil";
       } else {
