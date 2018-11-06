@@ -21,12 +21,10 @@ class Auth extends CI_Controller {
   function cekLogin() {
     $no_kk = $this->input->post('no_kk');
     $password = $this->input->post('password');
-    $level = $this->input->post('level');
 
     $where = array(
       'a.no_kk' =>  $no_kk,
-      'a.password' => $password,
-      'a.level' => $level
+      'a.password' => $password
     );
 
     $cek = $this->main->select_user($where);

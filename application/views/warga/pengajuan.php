@@ -12,7 +12,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-lg-6">
-              <!-- <div class="form-group">
+              <div class="form-group">
                 <label class="form-label">NIK</label>
                 <div class="input-group">
                   <input type="text" class="form-control" name="nik" id="nik">
@@ -20,7 +20,7 @@
                     <button class="btn btn-primary" type="button" id="lookup_anggota"><i class="fa fa-search"></i></button>
                   </span>
                 </div>
-              </div> -->
+              </div>
               <div class="form-group">
                 <label class="form-label">Nama Lengkap</label>
                 <input type="text" name="nama_pengajuan" id="nama_pengajuan" class="form-control">

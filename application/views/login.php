@@ -76,15 +76,6 @@
                     <input type="password" class="form-control" id="password" name="password">
                   </div>
                   <div class="form-group">
-                    <label for="form-label">Level</label>
-                    <select class="form-control" name="level" id="level">
-                      <option value="">--Pilih Level--</option>
-                      <option value="Warga">Warga</option>
-                      <option value="RT">RT</option>
-                      <option value="RW">RW</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
                     <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" />
                       <span class="custom-control-label">Show password</span>
@@ -110,7 +101,7 @@
 
         var submit = true;
 //function menciari data sudah terisi / belum
-        $(this).find('#no_kk, #password, #level').each(function(){
+        $(this).find('#no_kk, #password').each(function(){
           if ($(this).val() == '' ) {
             submit = false;
           }else {
