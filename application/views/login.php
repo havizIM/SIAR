@@ -66,8 +66,8 @@
                     <strong><h2>Login SIAR</h2></strong>
                   </div>
                   <div class="form-group">
-                    <label class="form-label">Nomor KK</label>
-                    <input type="text" class="form-control" id="no_kk" name="no_kk" aria-describedby="emailHelp">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                   </div>
                   <div class="form-group">
                     <label class="form-label">
@@ -123,7 +123,7 @@
                 if (respons == 'berhasil'){
                   window.location = '<?= base_url().'main/' ?>';
                 }else {
-                  toastr.error('No KK atau Password salah','Error');
+                  toastr.error('Email atau Password salah','Error');
                   $('#btn_submit').removeClass('btn-loading');
                 }
 
@@ -133,7 +133,7 @@
               }
             });
           }else{
-            toastr.warning('Silahkan masukkan No KK dan Password');
+            toastr.warning('Silahkan masukkan Email dan Password');
           }
       });
       toastr.options = {

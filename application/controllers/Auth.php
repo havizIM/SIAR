@@ -19,11 +19,11 @@ class Auth extends CI_Controller {
 
 
   function cekLogin() {
-    $no_kk = $this->input->post('no_kk');
+    $email = $this->input->post('email');
     $password = $this->input->post('password');
 
     $where = array(
-      'a.no_kk' =>  $no_kk,
+      'a.email' =>  $email,
       'a.password' => $password
     );
 
@@ -33,12 +33,14 @@ class Auth extends CI_Controller {
           $no_kk = $key->no_kk;
           $level = $key->level;
           $rtrw = $key->rtrw;
+          $email = $key->email;
       }
 
       $session = array(
         'no_kk' => $no_kk,
         'rtrw' => $rtrw,
         'level' => $level,
+        'email' => $email,
         'login' => true
       );
 
@@ -55,6 +57,33 @@ class Auth extends CI_Controller {
     $this->session->sess_destroy();
     redirect(base_url().'');
   }
+
+  function ganti_password()
+  {
+     $email    = $this->session->userdata('email');
+     $new_pass = $this->input->post('new_pass');
+     $old_pass = $this->input->post('old_pass');
+     $where = array(
+       'email' => $email,
+       'password' => $old_pass
+     );
+     $data = array(
+       'password' => $new_pass
+     );
+     $rows = $this->core->select('t_user', $where)->num_rows();
+     if($rows == 1)
+     {
+       $cek = $this->core->edit_data('t_user', $data, $where);
+       if($cek)
+       {
+         echo "berhasil";
+       } else {
+         echo "gagal";
+       }
+     }  else {
+       echo "gagal";
+     }
+   }
 
 
 }

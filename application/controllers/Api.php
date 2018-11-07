@@ -153,6 +153,46 @@
 
     function validasi_pengajuan()
     {
+
+      // $id_daftar = $this->input->post('id_daftar');
+      // $status = $this->input->post('status');
+      // $email = $this->input->post('email');
+      // $maildata['id_daftar'] = $this->input->post('id_daftar');
+      // $maildata['nama_wali'] = $this->input->post('nama_wali');
+      // $maildata['nama_murid'] = $this->input->post('nama_murid');
+      //
+      // if($status == 'Terima'){
+      //   $message = $this->load->view('admin/v_email_accept', $maildata,  TRUE);
+      // } else {
+      //   $message = $this->load->view('admin/v_email_reject', $maildata,  TRUE);
+      // }
+
+      // $config = [
+      //     'useragent' => 'CodeIgniter',
+      //     'protocol'  => 'smtp',
+      //     'mailpath'  => '/usr/sbin/sendmail',
+      //     'smtp_host' => 'ssl://smtp.gmail.com',
+      //     'smtp_user' => 'mawarpaud15@gmail.com',   // Ganti dengan email gmail Anda.
+      //     'smtp_pass' => 'paudmawar015',             // Password gmail Anda.
+      //     'smtp_port' => 465,
+      //     'smtp_keepalive' => TRUE,
+      //     'smtp_crypto' => 'SSL',
+      //     'wordwrap'  => TRUE,
+      //     'wrapchars' => 80,
+      //     'mailtype'  => 'html',
+      //     'charset'   => 'utf-8',
+      //     'validate'  => TRUE,
+      //     'crlf'      => "\r\n",
+      //     'newline'   => "\r\n",
+      // ];
+      // $config['mailtype'] = 'html';
+      //
+      // $this->email->initialize($config);
+      // $this->email->from('mawarpaud15@gmail.com','PAUD MAWAR 015');
+      // $this->email->to($email);
+      // $this->email->subject('Hasil Penerimaan Murid PAUD 015');
+      // $this->email->message($message);
+
       $where = array('no_pengajuan' => $this->input->post('no_pengajuan'));
       $data = array('status_pengajuan' => 'Menunggu');
 
@@ -160,6 +200,7 @@
 
       if($cek){
         echo "berhasil";
+        // $this->email->send();
       } else {
         echo "gagal";
       }

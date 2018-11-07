@@ -203,7 +203,7 @@
               <input type="password" class="form-control" id="rtp_pass" name="rtp_pass" />
             </div>
             <div class="form-grup">
-              <center><button type="submit" class="btn btn-primary">Simpan</button></center>
+              <center><button type="submit" class="btn btn-primary" id="submit">Simpan</button></center>
             </div>
           </form>
         </div>
@@ -260,6 +260,7 @@
 // modal bootstrap
         $("#btn_pass").on('click',function(){
           $("#modal_pass").modal('show');
+          $('#form_pass')[0].reset();
         });
 
 //Function validasi untuk ganti password
@@ -275,14 +276,34 @@
               submit = true;
             }
           });
-          if (submit == true ) {
 
+          if (submit == true ) {
             if ($('#new_pass').val() != $('#rtp_pass').val() ){
               toastr.warning('Password baru tidak sama')
             }else {
-              toastr.success('Password berhasil di perbaharui')
-                $('#m_pass').dialog("close");
-                $('#form_pass')[0].reset();
+
+              $.ajax({
+                url: '<?= base_url().'auth/ganti_password' ?>',
+                type: 'POST',
+                data: $(this).serialize(),
+                beforeSend: function(){
+                  $('#submit').addClass('btn-loading');
+                },
+                success: function(data){
+                  if(data == 'berhasil'){
+                    toastr.success('Password berhasil di perbaharui');
+                    $('#submit').removeClass('btn-loading');
+                    $('#modal_pass').modal('hide');
+                  } else {
+                    toastr.error('Password tidak berhasil di perbaharui');
+                    $('#submit').removeClass('btn-loading');
+                    $('#modal_pass').modal('hide');
+                  }
+
+                }, error: function(){
+                  toastr.success('Password tidak berhasil di perbaharui')
+                }
+              })
             }
           }else{
             toastr.error('Masukkan Password')

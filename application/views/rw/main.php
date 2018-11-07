@@ -234,6 +234,7 @@
 // Function modal
               $('#btn_pass').on('click',function(){
                 $('#modal_pass').modal('show');
+                $('#form_pass')[0].reset();
               });
 // Function Validasi ganti password
               $('#form_pass').on('submit', function(e){
@@ -252,9 +253,27 @@
                   if ($('#new_pass').val() != $('#rtp_pass').val() ) {
                     toastr.warning('Password Tidak Sama')
                   }else {
-                    toastr.success('Password Berhasil di Perbaharui')
-                    $('#m_pass').dialog('close');
-                    $('#form_pass')[0].reset();
+                    $.ajax({
+                      url: '<?= base_url().'auth/ganti_password' ?>',
+                      type: 'POST',
+                      data: $(this).serialize(),
+                      beforeSend: function(){
+                        $('#submit').addClass('btn-loading');
+                      },
+                      success: function(data){
+                        if(data == 'berhasil'){
+                          toastr.success('Password berhasil di perbaharui');
+                          $('#submit').removeClass('btn-loading');
+                          $('#modal_pass').modal('hide');
+                        } else {
+                          toastr.error('Password tidak berhasil di perbaharui');
+                          $('#submit').removeClass('btn-loading');
+                          $('#modal_pass').modal('hide');
+                        }
+                      }, error: function(){
+                        toastr.success('Password tidak berhasil di perbaharui')
+                      }
+                    })
                   }
                 }else {
                   toastr.error('Masukkan Password')
