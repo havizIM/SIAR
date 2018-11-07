@@ -172,7 +172,7 @@
           success: function(data){
             if(data == 'berhasil'){
               toastr.info('Berhasil menambah Dokumen', 'Berhasil');
-              $('#modal_detail').modal('hide');
+              $('#modal_dokumen').modal('hide');
               load_data();
             } else {
               toastr.error('Gagal menambah Dokumen', 'Failed');

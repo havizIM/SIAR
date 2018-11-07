@@ -85,7 +85,7 @@
 
     function select_pengajuan($where = null, $between = null)
     {
-      $this->db->select('a.*, b.rtrw, c.no_dokumen');
+      $this->db->select('a.*, b.rtrw, c.no_dokumen, c.diambil_oleh, c.keterangan');
 
       $this->db->from('t_pengajuan a');
       $this->db->join('t_keluarga b', 'b.no_kk = a.no_kk', 'left');

@@ -20,6 +20,8 @@
                   <th>Tgl. Pengajuan</th>
                   <th>NIK</th>
                   <th>Nama</th>
+                  <th>Diambil Oleh</th>
+                  <th>Keterangan</th>
                   <th></th>
                 </tr>
               </thead>
@@ -83,6 +85,8 @@
             html += `<td>${v.tgl_pengajuan}</td>`;
             html += `<td>${v.NIK}</td>`;
             html += `<td>${v.nama_pengajuan}</td>`;
+            html += `<td>${v.diambil_oleh}</td>`;
+            html += `<td>${v.keterangan}</td>`;
             html += `<td><a class="btn btn-info btn-md text-white" href="<?= base_url().'dokumen/print_surat/' ?>${v.no_dokumen}" target="_blank"><i class="fa fa-print"></i> Print</a></td>`;
             html += `</tr>`;
           });

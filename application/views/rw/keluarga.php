@@ -19,13 +19,12 @@
               <thead>
                 <tr>
                   <th class="w-1">#</th>
+                  <th>RT/RW</th>
                   <th>No.KK</th>
                   <th>Alamat</th>
                   <th class="text-wrap">Kode POS</th>
                   <th>Provinsi</th>
                   <th>Kotamadya</th>
-                  <th>Kecamatan</th>
-                  <th>Kelurahan</th>
                   <th>Jml Anggota</th>
                   <th></th>
                 </tr>
@@ -88,12 +87,11 @@
             html += `<tr>`;
               html += `<td>${no++}</td>`;
               html += `<td>${v.no_kk}</td>`;
-              html += `<td>${v.alamat}</td>`;
+              html += `<td>${v.rtrw}</td>`;
+              html += `<td>${v.alamat}, Kel. ${v.kelurahan} Kec. ${v.kecamatan}</td>`;
               html += `<td>${v.kode_pos}</td>`;
               html += `<td>${v.provinsi}</td>`;
               html += `<td>${v.kotamadya}</td>`;
-              html += `<td>${v.kecamatan}</td>`;
-              html += `<td>${v.kelurahan}</td>`;
               html += `<td>${v.jml_anggota}</td>`;
               html += `<td>`;
               html += `<a class="btn btn-info btn-md" href="#/anggota/${v.no_kk}"><i class="fa fa-search"></i> Detail</a>`;

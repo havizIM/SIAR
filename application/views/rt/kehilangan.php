@@ -19,7 +19,7 @@
                   <th>Tgl. Pengajuan</th>
                   <th>NIK</th>
                   <th>Nama</th>
-                  <th></th>
+                  <!-- <th></th> -->
                 </tr>
               </thead>
               <tbody></tbody>
@@ -81,7 +81,7 @@
             html += `<td>${v.tgl_pengajuan}</td>`;
             html += `<td>${v.NIK}</td>`;
             html += `<td>${v.nama_pengajuan}</td>`;
-            html += `<td><a class="btn btn-info btn-md text-white"><i class="fa fa-eye"></i> Detail</a></td>`;
+            // html += `<td><a class="btn btn-info btn-md text-white"><i class="fa fa-eye"></i> Detail</a></td>`;
             html += `</tr>`;
           });
         } else {
